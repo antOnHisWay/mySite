@@ -150,6 +150,9 @@ for(key in colorGroups) {
 
     output +=s_all + s_single + s_double + s_triple + s_quadruple;
 
+    output += `.header-desc h1:before{content: '${meta.title}'}`;
+    output += `.header-desc p:before{content: '${meta.desc}'}`;
+
     fs.writeFile('../dist/css/' + meta.name + '.css', output, { flag: 'w+' }, err => {});
 
     var html = getHtml(meta);
@@ -178,7 +181,6 @@ function getSingle(colors) {
 
     return output;
 }
-
 
 function getDouble(colors, double) {
     var output = '';
@@ -267,6 +269,39 @@ function getAll() {
     height: 800px;
 }
 
+#sidebar ul {
+    padding: 0;
+}
+
+#sidebar ul li {
+    text-decoration: none;
+    text-align: center;
+    list-style: none;
+    padding: 25px 0;
+    color: #FFFFFF;
+    border-bottom: 1px solid #0a0a0a;
+}
+
+#sidebar ul li:hover {
+    background: red;
+}
+
+#sidebar a {
+    text-underline: none;
+    text-decoration: none;
+    color: #0a0a0a;
+    font-size: 22px;
+}
+
+.color-header {
+    border-bottom: 1px solid;
+    width: 300px;
+    padding-top: 30px;
+    margin-top: 50px;
+    font-size: 30px;
+    color: #4e4e4e;
+}
+
 #main {
     width: 80%;
     display: inline-block;
@@ -319,16 +354,20 @@ function getHtml(meta) {
     <div id="app" class="container">
         <div id="sidebar">
             <ul>
-                <li data-index="0">产品</li>
-                <li data-index="1">设计</li>
-                <li data-index="2">测试</li>
-                <li data-index="3">项目</li>
-                <li data-index="4">文件</li>
-                <li data-index="5">自由人</li>
+                <li data-index="0"><a href="#single-header">单色</a></li>
+                <li data-index="1"><a href="#double-header">双色</a></li>
+                <li data-index="2"><a href="#triple-header">三色</a></li>
+                <li data-index="3"><a href="#quadruple-header">四色</a></li>
             </ul>
         </div>
 
         <div id="main">
+            <div class="m-2 header-desc">
+                <h1></h1>
+                <p></p>
+            </div>
+
+            <div class="color-header m-2" id="single-header">单色</div>
             <div class="row m-2 gx-2" id="single">
                 <div class="col-2 mt-2">
                     <div></div>
@@ -397,6 +436,7 @@ function getHtml(meta) {
                 </div>
             </div>
 
+            <div class="color-header m-2" id="double-header">双色</div>
             <div class="row m-2 gx-2" id="double">
                 <div class="col-2 mt-2">
                     <div class="mt-2"><div></div></div>
@@ -441,6 +481,7 @@ function getHtml(meta) {
                 </div>
             </div>
 
+            <div class="color-header m-2" id="triple-header">三色</div>
             <div class="row m-2 gx-2" id="triple">
                 <div class="col-2 mt-2">
                     <div class="mt-2"><div></div></div>
@@ -480,6 +521,7 @@ function getHtml(meta) {
                 </div>
             </div>
 
+            <div class="color-header m-2" id="quadruple-header">四色</div>
             <div class="row m-2 gx-2" id="quadruple">
                 <div class="col-2 mt-2">
                     <div class="mt-2"><div></div></div>

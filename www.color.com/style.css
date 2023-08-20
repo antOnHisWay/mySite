@@ -384,3 +384,44 @@
     height: 0;
     background: linear-gradient(30deg, #00ff00 26%, #ff00ff 26% 50%, #ff6600 50% 74%, #00ffff 74%);
 }
+#sidebar {
+    width: 10%;
+    margin-right: 10%;
+    display: inline-block;
+    background: rgba(0,0,0,0.3);
+    height: 800px;
+}
+
+#sidebar ul {
+    padding: 0;
+}
+
+#sidebar ul li {
+    text-decoration: none;
+    text-align: center;
+    list-style: none;
+    padding: 25px 0;
+    color: #FFFFFF;
+    border-bottom: 1px solid #0a0a0a;
+}
+
+#sidebar ul li:hover {
+    background: red;
+}
+
+#sidebar a {
+    text-underline: none;
+    text-decoration: none;
+    color: #0a0a0a;
+    font-size: 22px;
+}
+
+
+.color-header {
+    border-bottom: 1px solid;
+    width: 300px;
+    padding-top: 30px;
+    margin-top: 50px;
+    font-size: 30px;
+    color: #4e4e4e;
+}

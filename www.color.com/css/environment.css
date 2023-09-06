@@ -1,0 +1,422 @@
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1200px;
+}
+
+.container #main, .container #sidebar {
+    margin-top: 150px;
+}
+
+#sidebar {
+    display: inline-block;
+    background: rgba(0,0,0,0.3);
+    text-align: center;
+}
+
+
+#sidebar ul li {
+    text-decoration: none;
+    text-align: center;
+    list-style: none;
+    padding: 25px 0;
+    color: #FFFFFF;
+    border-bottom: 1px solid #0a0a0a;
+}
+
+#sidebar ul li:hover {
+    background: red;
+}
+
+#sidebar a {
+    text-underline: none;
+    text-decoration: none;
+    color: #ff00ff;
+    font-size: 22px;
+}
+
+.color-header {
+    border-bottom: 1px solid;
+    width: 300px;
+    padding-top: 30px;
+    margin-top: 50px;
+    font-size: 30px;
+    color: #4e4e4e;
+}
+
+#main {
+    width: 80%;
+    display: inline-block;
+    float: right;
+}
+
+#single div {
+    height: 100px;
+}
+#double>div>div {
+    width: 100%;
+}
+
+#double>div>div>div {
+    padding-bottom: 50%;
+    height: 0;
+}
+
+#double>div>div:nth-child(2)>div:after {
+    content: 'Shopping';
+}
+
+#triple>div>div {
+    width: 100%;
+}
+
+#triple>div>div>div {
+    padding-bottom: 50%;
+    height: 0;
+}
+
+#quadruple>div>div {
+    width: 100%;
+}
+#single div:nth-child(1)>div:nth-child(1) {
+    background: #8dac5d;
+}
+#single div:nth-child(2)>h1:before {
+    content: '1';
+}
+#single div:nth-child(2)>p:before {
+    content: '#8dac5d';
+}
+#single div:nth-child(3)>div:nth-child(1) {
+    background: #5f9c84;
+}
+#single div:nth-child(4)>h1:before {
+    content: '2';
+}
+#single div:nth-child(4)>p:before {
+    content: '#5f9c84';
+}
+#single div:nth-child(5)>div:nth-child(1) {
+    background: #005c41;
+}
+#single div:nth-child(6)>h1:before {
+    content: '3';
+}
+#single div:nth-child(6)>p:before {
+    content: '#005c41';
+}
+#single div:nth-child(7)>div:nth-child(1) {
+    background: #c8d970;
+}
+#single div:nth-child(8)>h1:before {
+    content: '4';
+}
+#single div:nth-child(8)>p:before {
+    content: '#c8d970';
+}
+#single div:nth-child(9)>div:nth-child(1) {
+    background: #9bb797;
+}
+#single div:nth-child(10)>h1:before {
+    content: '5';
+}
+#single div:nth-child(10)>p:before {
+    content: '#9bb797';
+}
+#single div:nth-child(11)>div:nth-child(1) {
+    background: #344f71;
+}
+#single div:nth-child(12)>h1:before {
+    content: '6';
+}
+#single div:nth-child(12)>p:before {
+    content: '#344f71';
+}
+#single div:nth-child(13)>div:nth-child(1) {
+    background: #ffffff;
+}
+#single div:nth-child(14)>h1:before {
+    content: '7';
+}
+#single div:nth-child(14)>p:before {
+    content: '#ffffff';
+}
+#single div:nth-child(15)>div:nth-child(1) {
+    background: #dee1de;
+}
+#single div:nth-child(16)>h1:before {
+    content: '8';
+}
+#single div:nth-child(16)>p:before {
+    content: '#dee1de';
+}
+#single div:nth-child(17)>div:nth-child(1) {
+    background: #bac1c7;
+}
+#single div:nth-child(18)>h1:before {
+    content: '9';
+}
+#single div:nth-child(18)>p:before {
+    content: '#bac1c7';
+}
+#double>div:nth-child(1)>div:nth-child(1)>div {
+    background: linear-gradient(154deg, #005c41 50%, #9bb797 0);
+}
+#double>div:nth-child(1)>div:nth-child(2)>div {
+    background: #9bb797;
+    color: #005c41;
+    line-height: 60px;
+    font-size: 18px;
+    text-align: center;
+}
+#double>div:nth-child(1)>div:nth-child(3)>div {
+    background: linear-gradient(90deg, #005c41 50%, #9bb797 0);
+    background-size: 20% 100px;
+}
+#double>div:nth-child(1)>div:nth-child(4)>div {
+    background: linear-gradient(154deg, #005c41 50%, #9bb797 0);
+}
+#double>div:nth-child(2)>div:nth-child(1)>div {
+    background: linear-gradient(154deg, #8dac5d 50%, #005c41 0);
+}
+#double>div:nth-child(2)>div:nth-child(2)>div {
+    background: #005c41;
+    color: #8dac5d;
+    line-height: 60px;
+    font-size: 18px;
+    text-align: center;
+}
+#double>div:nth-child(2)>div:nth-child(3)>div {
+    background: linear-gradient(90deg, #8dac5d 50%, #005c41 0);
+    background-size: 20% 100px;
+}
+#double>div:nth-child(2)>div:nth-child(4)>div {
+    background: linear-gradient(154deg, #8dac5d 50%, #005c41 0);
+}
+#double>div:nth-child(3)>div:nth-child(1)>div {
+    background: linear-gradient(154deg, #9bb797 50%, #344f71 0);
+}
+#double>div:nth-child(3)>div:nth-child(2)>div {
+    background: #344f71;
+    color: #9bb797;
+    line-height: 60px;
+    font-size: 18px;
+    text-align: center;
+}
+#double>div:nth-child(3)>div:nth-child(3)>div {
+    background: linear-gradient(90deg, #9bb797 50%, #344f71 0);
+    background-size: 20% 100px;
+}
+#double>div:nth-child(3)>div:nth-child(4)>div {
+    background: linear-gradient(154deg, #9bb797 50%, #344f71 0);
+}
+#double>div:nth-child(4)>div:nth-child(1)>div {
+    background: linear-gradient(154deg, #5f9c84 50%, #ffffff 0);
+}
+#double>div:nth-child(4)>div:nth-child(2)>div {
+    background: #ffffff;
+    color: #5f9c84;
+    line-height: 60px;
+    font-size: 18px;
+    text-align: center;
+}
+#double>div:nth-child(4)>div:nth-child(3)>div {
+    background: linear-gradient(90deg, #5f9c84 50%, #ffffff 0);
+    background-size: 20% 100px;
+}
+#double>div:nth-child(4)>div:nth-child(4)>div {
+    background: linear-gradient(154deg, #5f9c84 50%, #ffffff 0);
+}
+#double>div:nth-child(5)>div:nth-child(1)>div {
+    background: linear-gradient(154deg, #c8d970 50%, #9bb797 0);
+}
+#double>div:nth-child(5)>div:nth-child(2)>div {
+    background: #9bb797;
+    color: #c8d970;
+    line-height: 60px;
+    font-size: 18px;
+    text-align: center;
+}
+#double>div:nth-child(5)>div:nth-child(3)>div {
+    background: linear-gradient(90deg, #c8d970 50%, #9bb797 0);
+    background-size: 20% 100px;
+}
+#double>div:nth-child(5)>div:nth-child(4)>div {
+    background: linear-gradient(154deg, #c8d970 50%, #9bb797 0);
+}
+#double>div:nth-child(6)>div:nth-child(1)>div {
+    background: linear-gradient(154deg, #9bb797 50%, #dee1de 0);
+}
+#double>div:nth-child(6)>div:nth-child(2)>div {
+    background: #dee1de;
+    color: #9bb797;
+    line-height: 60px;
+    font-size: 18px;
+    text-align: center;
+}
+#double>div:nth-child(6)>div:nth-child(3)>div {
+    background: linear-gradient(90deg, #9bb797 50%, #dee1de 0);
+    background-size: 20% 100px;
+}
+#double>div:nth-child(6)>div:nth-child(4)>div {
+    background: linear-gradient(154deg, #9bb797 50%, #dee1de 0);
+}
+#triple>div:nth-child(1)>div:nth-child(1)>div {
+    background: linear-gradient(45deg, #005c41 35%, #9bb797 35% 70%, #dee1de 70%);
+    background-size: 100% 100%;
+}
+
+#triple>div:nth-child(1)>div:nth-child(2)>div {
+    background: linear-gradient(180deg, #005c41 80%, #9bb797 0);
+    color: #dee1de;
+    line-height: 60px;
+    font-size: 18px;
+    text-align: center;
+}
+
+#triple>div:nth-child(1)>div:nth-child(3)>div {
+    background: linear-gradient(90deg, #005c41 26%, #9bb797 26% 74%, #dee1de 74%);
+    background-size: 35% 500px;
+}
+
+#triple>div:nth-child(1)>div:nth-child(4)>div {
+    background: linear-gradient(154deg, #f55 50%, #55f 0);
+}
+#triple>div:nth-child(2)>div:nth-child(1)>div {
+    background: linear-gradient(45deg, #8dac5d 35%, #005c41 35% 70%, #dee1de 70%);
+    background-size: 100% 100%;
+}
+
+#triple>div:nth-child(2)>div:nth-child(2)>div {
+    background: linear-gradient(180deg, #8dac5d 80%, #005c41 0);
+    color: #dee1de;
+    line-height: 60px;
+    font-size: 18px;
+    text-align: center;
+}
+
+#triple>div:nth-child(2)>div:nth-child(3)>div {
+    background: linear-gradient(90deg, #8dac5d 26%, #005c41 26% 74%, #dee1de 74%);
+    background-size: 35% 500px;
+}
+
+#triple>div:nth-child(2)>div:nth-child(4)>div {
+    background: linear-gradient(154deg, #f55 50%, #55f 0);
+}
+#triple>div:nth-child(3)>div:nth-child(1)>div {
+    background: linear-gradient(45deg, #9bb797 35%, #344f71 35% 70%, #5f9c84 70%);
+    background-size: 100% 100%;
+}
+
+#triple>div:nth-child(3)>div:nth-child(2)>div {
+    background: linear-gradient(180deg, #9bb797 80%, #344f71 0);
+    color: #5f9c84;
+    line-height: 60px;
+    font-size: 18px;
+    text-align: center;
+}
+
+#triple>div:nth-child(3)>div:nth-child(3)>div {
+    background: linear-gradient(90deg, #9bb797 26%, #344f71 26% 74%, #5f9c84 74%);
+    background-size: 35% 500px;
+}
+
+#triple>div:nth-child(3)>div:nth-child(4)>div {
+    background: linear-gradient(154deg, #f55 50%, #55f 0);
+}
+#triple>div:nth-child(4)>div:nth-child(1)>div {
+    background: linear-gradient(45deg, #5f9c84 35%, #ffffff 35% 70%, #bac1c7 70%);
+    background-size: 100% 100%;
+}
+
+#triple>div:nth-child(4)>div:nth-child(2)>div {
+    background: linear-gradient(180deg, #5f9c84 80%, #ffffff 0);
+    color: #bac1c7;
+    line-height: 60px;
+    font-size: 18px;
+    text-align: center;
+}
+
+#triple>div:nth-child(4)>div:nth-child(3)>div {
+    background: linear-gradient(90deg, #5f9c84 26%, #ffffff 26% 74%, #bac1c7 74%);
+    background-size: 35% 500px;
+}
+
+#triple>div:nth-child(4)>div:nth-child(4)>div {
+    background: linear-gradient(154deg, #f55 50%, #55f 0);
+}
+#triple>div:nth-child(5)>div:nth-child(1)>div {
+    background: linear-gradient(45deg, #c8d970 35%, #9bb797 35% 70%, #344f71 70%);
+    background-size: 100% 100%;
+}
+
+#triple>div:nth-child(5)>div:nth-child(2)>div {
+    background: linear-gradient(180deg, #c8d970 80%, #9bb797 0);
+    color: #344f71;
+    line-height: 60px;
+    font-size: 18px;
+    text-align: center;
+}
+
+#triple>div:nth-child(5)>div:nth-child(3)>div {
+    background: linear-gradient(90deg, #c8d970 26%, #9bb797 26% 74%, #344f71 74%);
+    background-size: 35% 500px;
+}
+
+#triple>div:nth-child(5)>div:nth-child(4)>div {
+    background: linear-gradient(154deg, #f55 50%, #55f 0);
+}
+#triple>div:nth-child(6)>div:nth-child(1)>div {
+    background: linear-gradient(45deg, #9bb797 35%, #dee1de 35% 70%, #5f9c84 70%);
+    background-size: 100% 100%;
+}
+
+#triple>div:nth-child(6)>div:nth-child(2)>div {
+    background: linear-gradient(180deg, #9bb797 80%, #dee1de 0);
+    color: #5f9c84;
+    line-height: 60px;
+    font-size: 18px;
+    text-align: center;
+}
+
+#triple>div:nth-child(6)>div:nth-child(3)>div {
+    background: linear-gradient(90deg, #9bb797 26%, #dee1de 26% 74%, #5f9c84 74%);
+    background-size: 35% 500px;
+}
+
+#triple>div:nth-child(6)>div:nth-child(4)>div {
+    background: linear-gradient(154deg, #f55 50%, #55f 0);
+}
+#quadruple>div:nth-child(1)>div>div {
+    padding-bottom: 200%;
+    height: 0;
+    background: linear-gradient(30deg, #005c41 26%, #9bb797 26% 50%, #dee1de 50% 74%, #344f71 74%);
+}
+#quadruple>div:nth-child(2)>div>div {
+    padding-bottom: 200%;
+    height: 0;
+    background: linear-gradient(30deg, #8dac5d 26%, #005c41 26% 50%, #dee1de 50% 74%, #c8d970 74%);
+}
+#quadruple>div:nth-child(3)>div>div {
+    padding-bottom: 200%;
+    height: 0;
+    background: linear-gradient(30deg, #9bb797 26%, #344f71 26% 50%, #5f9c84 50% 74%, #8dac5d 74%);
+}
+#quadruple>div:nth-child(4)>div>div {
+    padding-bottom: 200%;
+    height: 0;
+    background: linear-gradient(30deg, #5f9c84 26%, #ffffff 26% 50%, #bac1c7 50% 74%, #c8d970 74%);
+}
+#quadruple>div:nth-child(5)>div>div {
+    padding-bottom: 200%;
+    height: 0;
+    background: linear-gradient(30deg, #c8d970 26%, #9bb797 26% 50%, #344f71 50% 74%, #5f9c84 74%);
+}
+#quadruple>div:nth-child(6)>div>div {
+    padding-bottom: 200%;
+    height: 0;
+    background: linear-gradient(30deg, #9bb797 26%, #dee1de 26% 50%, #5f9c84 50% 74%, #005c41 74%);
+}.header-desc h1:before{content: '环境'}.header-desc p:before{content: '这是一组可以灵活运用在都市规划、农业改革等与自然能源和IT相关领域的配色。以大自然的联想色--绿色为基调，搭配白色和灰色，给人以理性、高级的印象'}

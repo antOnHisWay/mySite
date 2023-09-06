@@ -1,0 +1,422 @@
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1200px;
+}
+
+.container #main, .container #sidebar {
+    margin-top: 150px;
+}
+
+#sidebar {
+    display: inline-block;
+    background: rgba(0,0,0,0.3);
+    text-align: center;
+}
+
+
+#sidebar ul li {
+    text-decoration: none;
+    text-align: center;
+    list-style: none;
+    padding: 25px 0;
+    color: #FFFFFF;
+    border-bottom: 1px solid #0a0a0a;
+}
+
+#sidebar ul li:hover {
+    background: red;
+}
+
+#sidebar a {
+    text-underline: none;
+    text-decoration: none;
+    color: #ff00ff;
+    font-size: 22px;
+}
+
+.color-header {
+    border-bottom: 1px solid;
+    width: 300px;
+    padding-top: 30px;
+    margin-top: 50px;
+    font-size: 30px;
+    color: #4e4e4e;
+}
+
+#main {
+    width: 80%;
+    display: inline-block;
+    float: right;
+}
+
+#single div {
+    height: 100px;
+}
+#double>div>div {
+    width: 100%;
+}
+
+#double>div>div>div {
+    padding-bottom: 50%;
+    height: 0;
+}
+
+#double>div>div:nth-child(2)>div:after {
+    content: 'Shopping';
+}
+
+#triple>div>div {
+    width: 100%;
+}
+
+#triple>div>div>div {
+    padding-bottom: 50%;
+    height: 0;
+}
+
+#quadruple>div>div {
+    width: 100%;
+}
+#single div:nth-child(1)>div:nth-child(1) {
+    background: #3881b4;
+}
+#single div:nth-child(2)>h1:before {
+    content: '1';
+}
+#single div:nth-child(2)>p:before {
+    content: '#3881b4';
+}
+#single div:nth-child(3)>div:nth-child(1) {
+    background: #6ab1bc;
+}
+#single div:nth-child(4)>h1:before {
+    content: '2';
+}
+#single div:nth-child(4)>p:before {
+    content: '#6ab1bc';
+}
+#single div:nth-child(5)>div:nth-child(1) {
+    background: #192d41;
+}
+#single div:nth-child(6)>h1:before {
+    content: '3';
+}
+#single div:nth-child(6)>p:before {
+    content: '#192d41';
+}
+#single div:nth-child(7)>div:nth-child(1) {
+    background: #eaddcf;
+}
+#single div:nth-child(8)>h1:before {
+    content: '4';
+}
+#single div:nth-child(8)>p:before {
+    content: '#eaddcf';
+}
+#single div:nth-child(9)>div:nth-child(1) {
+    background: #6e512b;
+}
+#single div:nth-child(10)>h1:before {
+    content: '5';
+}
+#single div:nth-child(10)>p:before {
+    content: '#6e512b';
+}
+#single div:nth-child(11)>div:nth-child(1) {
+    background: #b58237;
+}
+#single div:nth-child(12)>h1:before {
+    content: '6';
+}
+#single div:nth-child(12)>p:before {
+    content: '#b58237';
+}
+#single div:nth-child(13)>div:nth-child(1) {
+    background: #000000;
+}
+#single div:nth-child(14)>h1:before {
+    content: '7';
+}
+#single div:nth-child(14)>p:before {
+    content: '#000000';
+}
+#single div:nth-child(15)>div:nth-child(1) {
+    background: #c6291f;
+}
+#single div:nth-child(16)>h1:before {
+    content: '8';
+}
+#single div:nth-child(16)>p:before {
+    content: '#c6291f';
+}
+#single div:nth-child(17)>div:nth-child(1) {
+    background: #ffffff;
+}
+#single div:nth-child(18)>h1:before {
+    content: '9';
+}
+#single div:nth-child(18)>p:before {
+    content: '#ffffff';
+}
+#double>div:nth-child(1)>div:nth-child(1)>div {
+    background: linear-gradient(154deg, #6ab1bc 50%, #3881b4 0);
+}
+#double>div:nth-child(1)>div:nth-child(2)>div {
+    background: #3881b4;
+    color: #6ab1bc;
+    line-height: 60px;
+    font-size: 18px;
+    text-align: center;
+}
+#double>div:nth-child(1)>div:nth-child(3)>div {
+    background: linear-gradient(90deg, #6ab1bc 50%, #3881b4 0);
+    background-size: 20% 100px;
+}
+#double>div:nth-child(1)>div:nth-child(4)>div {
+    background: linear-gradient(154deg, #6ab1bc 50%, #3881b4 0);
+}
+#double>div:nth-child(2)>div:nth-child(1)>div {
+    background: linear-gradient(154deg, #192d41 50%, #eaddcf 0);
+}
+#double>div:nth-child(2)>div:nth-child(2)>div {
+    background: #eaddcf;
+    color: #192d41;
+    line-height: 60px;
+    font-size: 18px;
+    text-align: center;
+}
+#double>div:nth-child(2)>div:nth-child(3)>div {
+    background: linear-gradient(90deg, #192d41 50%, #eaddcf 0);
+    background-size: 20% 100px;
+}
+#double>div:nth-child(2)>div:nth-child(4)>div {
+    background: linear-gradient(154deg, #192d41 50%, #eaddcf 0);
+}
+#double>div:nth-child(3)>div:nth-child(1)>div {
+    background: linear-gradient(154deg, #6e512b 50%, #b58237 0);
+}
+#double>div:nth-child(3)>div:nth-child(2)>div {
+    background: #b58237;
+    color: #6e512b;
+    line-height: 60px;
+    font-size: 18px;
+    text-align: center;
+}
+#double>div:nth-child(3)>div:nth-child(3)>div {
+    background: linear-gradient(90deg, #6e512b 50%, #b58237 0);
+    background-size: 20% 100px;
+}
+#double>div:nth-child(3)>div:nth-child(4)>div {
+    background: linear-gradient(154deg, #6e512b 50%, #b58237 0);
+}
+#double>div:nth-child(4)>div:nth-child(1)>div {
+    background: linear-gradient(154deg, #c6291f 50%, #6e512b 0);
+}
+#double>div:nth-child(4)>div:nth-child(2)>div {
+    background: #6e512b;
+    color: #c6291f;
+    line-height: 60px;
+    font-size: 18px;
+    text-align: center;
+}
+#double>div:nth-child(4)>div:nth-child(3)>div {
+    background: linear-gradient(90deg, #c6291f 50%, #6e512b 0);
+    background-size: 20% 100px;
+}
+#double>div:nth-child(4)>div:nth-child(4)>div {
+    background: linear-gradient(154deg, #c6291f 50%, #6e512b 0);
+}
+#double>div:nth-child(5)>div:nth-child(1)>div {
+    background: linear-gradient(154deg, #3881b4 50%, #ffffff 0);
+}
+#double>div:nth-child(5)>div:nth-child(2)>div {
+    background: #ffffff;
+    color: #3881b4;
+    line-height: 60px;
+    font-size: 18px;
+    text-align: center;
+}
+#double>div:nth-child(5)>div:nth-child(3)>div {
+    background: linear-gradient(90deg, #3881b4 50%, #ffffff 0);
+    background-size: 20% 100px;
+}
+#double>div:nth-child(5)>div:nth-child(4)>div {
+    background: linear-gradient(154deg, #3881b4 50%, #ffffff 0);
+}
+#double>div:nth-child(6)>div:nth-child(1)>div {
+    background: linear-gradient(154deg, #ffffff 50%, #6ab1bc 0);
+}
+#double>div:nth-child(6)>div:nth-child(2)>div {
+    background: #6ab1bc;
+    color: #ffffff;
+    line-height: 60px;
+    font-size: 18px;
+    text-align: center;
+}
+#double>div:nth-child(6)>div:nth-child(3)>div {
+    background: linear-gradient(90deg, #ffffff 50%, #6ab1bc 0);
+    background-size: 20% 100px;
+}
+#double>div:nth-child(6)>div:nth-child(4)>div {
+    background: linear-gradient(154deg, #ffffff 50%, #6ab1bc 0);
+}
+#triple>div:nth-child(1)>div:nth-child(1)>div {
+    background: linear-gradient(45deg, #6ab1bc 35%, #3881b4 35% 70%, #6e512b 70%);
+    background-size: 100% 100%;
+}
+
+#triple>div:nth-child(1)>div:nth-child(2)>div {
+    background: linear-gradient(180deg, #6ab1bc 80%, #3881b4 0);
+    color: #6e512b;
+    line-height: 60px;
+    font-size: 18px;
+    text-align: center;
+}
+
+#triple>div:nth-child(1)>div:nth-child(3)>div {
+    background: linear-gradient(90deg, #6ab1bc 26%, #3881b4 26% 74%, #6e512b 74%);
+    background-size: 35% 500px;
+}
+
+#triple>div:nth-child(1)>div:nth-child(4)>div {
+    background: linear-gradient(154deg, #f55 50%, #55f 0);
+}
+#triple>div:nth-child(2)>div:nth-child(1)>div {
+    background: linear-gradient(45deg, #192d41 35%, #eaddcf 35% 70%, #c6291f 70%);
+    background-size: 100% 100%;
+}
+
+#triple>div:nth-child(2)>div:nth-child(2)>div {
+    background: linear-gradient(180deg, #192d41 80%, #eaddcf 0);
+    color: #c6291f;
+    line-height: 60px;
+    font-size: 18px;
+    text-align: center;
+}
+
+#triple>div:nth-child(2)>div:nth-child(3)>div {
+    background: linear-gradient(90deg, #192d41 26%, #eaddcf 26% 74%, #c6291f 74%);
+    background-size: 35% 500px;
+}
+
+#triple>div:nth-child(2)>div:nth-child(4)>div {
+    background: linear-gradient(154deg, #f55 50%, #55f 0);
+}
+#triple>div:nth-child(3)>div:nth-child(1)>div {
+    background: linear-gradient(45deg, #6e512b 35%, #b58237 35% 70%, #000000 70%);
+    background-size: 100% 100%;
+}
+
+#triple>div:nth-child(3)>div:nth-child(2)>div {
+    background: linear-gradient(180deg, #6e512b 80%, #b58237 0);
+    color: #000000;
+    line-height: 60px;
+    font-size: 18px;
+    text-align: center;
+}
+
+#triple>div:nth-child(3)>div:nth-child(3)>div {
+    background: linear-gradient(90deg, #6e512b 26%, #b58237 26% 74%, #000000 74%);
+    background-size: 35% 500px;
+}
+
+#triple>div:nth-child(3)>div:nth-child(4)>div {
+    background: linear-gradient(154deg, #f55 50%, #55f 0);
+}
+#triple>div:nth-child(4)>div:nth-child(1)>div {
+    background: linear-gradient(45deg, #c6291f 35%, #6e512b 35% 70%, #eaddcf 70%);
+    background-size: 100% 100%;
+}
+
+#triple>div:nth-child(4)>div:nth-child(2)>div {
+    background: linear-gradient(180deg, #c6291f 80%, #6e512b 0);
+    color: #eaddcf;
+    line-height: 60px;
+    font-size: 18px;
+    text-align: center;
+}
+
+#triple>div:nth-child(4)>div:nth-child(3)>div {
+    background: linear-gradient(90deg, #c6291f 26%, #6e512b 26% 74%, #eaddcf 74%);
+    background-size: 35% 500px;
+}
+
+#triple>div:nth-child(4)>div:nth-child(4)>div {
+    background: linear-gradient(154deg, #f55 50%, #55f 0);
+}
+#triple>div:nth-child(5)>div:nth-child(1)>div {
+    background: linear-gradient(45deg, #3881b4 35%, #ffffff 35% 70%, #eaddcf 70%);
+    background-size: 100% 100%;
+}
+
+#triple>div:nth-child(5)>div:nth-child(2)>div {
+    background: linear-gradient(180deg, #3881b4 80%, #ffffff 0);
+    color: #eaddcf;
+    line-height: 60px;
+    font-size: 18px;
+    text-align: center;
+}
+
+#triple>div:nth-child(5)>div:nth-child(3)>div {
+    background: linear-gradient(90deg, #3881b4 26%, #ffffff 26% 74%, #eaddcf 74%);
+    background-size: 35% 500px;
+}
+
+#triple>div:nth-child(5)>div:nth-child(4)>div {
+    background: linear-gradient(154deg, #f55 50%, #55f 0);
+}
+#triple>div:nth-child(6)>div:nth-child(1)>div {
+    background: linear-gradient(45deg, #ffffff 35%, #6ab1bc 35% 70%, #3881b4 70%);
+    background-size: 100% 100%;
+}
+
+#triple>div:nth-child(6)>div:nth-child(2)>div {
+    background: linear-gradient(180deg, #ffffff 80%, #6ab1bc 0);
+    color: #3881b4;
+    line-height: 60px;
+    font-size: 18px;
+    text-align: center;
+}
+
+#triple>div:nth-child(6)>div:nth-child(3)>div {
+    background: linear-gradient(90deg, #ffffff 26%, #6ab1bc 26% 74%, #3881b4 74%);
+    background-size: 35% 500px;
+}
+
+#triple>div:nth-child(6)>div:nth-child(4)>div {
+    background: linear-gradient(154deg, #f55 50%, #55f 0);
+}
+#quadruple>div:nth-child(1)>div>div {
+    padding-bottom: 200%;
+    height: 0;
+    background: linear-gradient(30deg, #6ab1bc 26%, #3881b4 26% 50%, #6e512b 50% 74%, #b58237 74%);
+}
+#quadruple>div:nth-child(2)>div>div {
+    padding-bottom: 200%;
+    height: 0;
+    background: linear-gradient(30deg, #192d41 26%, #eaddcf 26% 50%, #c6291f 50% 74%, #ffffff 74%);
+}
+#quadruple>div:nth-child(3)>div>div {
+    padding-bottom: 200%;
+    height: 0;
+    background: linear-gradient(30deg, #6e512b 26%, #b58237 26% 50%, #000000 50% 74%, #3881b4 74%);
+}
+#quadruple>div:nth-child(4)>div>div {
+    padding-bottom: 200%;
+    height: 0;
+    background: linear-gradient(30deg, #c6291f 26%, #6e512b 26% 50%, #eaddcf 50% 74%, #000000 74%);
+}
+#quadruple>div:nth-child(5)>div>div {
+    padding-bottom: 200%;
+    height: 0;
+    background: linear-gradient(30deg, #3881b4 26%, #ffffff 26% 50%, #eaddcf 50% 74%, #6ab1bc 74%);
+}
+#quadruple>div:nth-child(6)>div>div {
+    padding-bottom: 200%;
+    height: 0;
+    background: linear-gradient(30deg, #ffffff 26%, #6ab1bc 26% 50%, #3881b4 50% 74%, #b58237 74%);
+}.header-desc h1:before{content: '航海'}.header-desc p:before{content: '扬帆远航，去寻找新大陆和未知的宝藏，航海主题的配色就是要留下这种印象。用清爽的蓝色象征天空和大海，用褐色和红色象征船只和船员的装束，以此展现令人心潮澎湃的冒险精神。'}

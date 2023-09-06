@@ -1,0 +1,18 @@
+{{extend './layout.art'}}
+
+{{block 'content'}}
+<div id="main" class="w-75 float-start">
+    {{each categorys val key}}
+    <h1>{{val['title']}}</h1><p>{{val['desc']}}</p><ul>
+        {{each colorGroups v k}}
+            {{if val['id']===v['meta']['categoryId']}}
+    <li><a href="./{{colorGroups[k]['meta']['name']}}.html">{{colorGroups[k]['meta']['title']}}</a></li>
+            {{/if}}
+        {{/each}}
+    </ul>
+    {{/each}}
+</div>
+
+<div id="sidebar" class="w-20 float-end">
+</div>
+{{/block}}

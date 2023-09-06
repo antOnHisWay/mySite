@@ -1,0 +1,422 @@
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1200px;
+}
+
+.container #main, .container #sidebar {
+    margin-top: 150px;
+}
+
+#sidebar {
+    display: inline-block;
+    background: rgba(0,0,0,0.3);
+    text-align: center;
+}
+
+
+#sidebar ul li {
+    text-decoration: none;
+    text-align: center;
+    list-style: none;
+    padding: 25px 0;
+    color: #FFFFFF;
+    border-bottom: 1px solid #0a0a0a;
+}
+
+#sidebar ul li:hover {
+    background: red;
+}
+
+#sidebar a {
+    text-underline: none;
+    text-decoration: none;
+    color: #ff00ff;
+    font-size: 22px;
+}
+
+.color-header {
+    border-bottom: 1px solid;
+    width: 300px;
+    padding-top: 30px;
+    margin-top: 50px;
+    font-size: 30px;
+    color: #4e4e4e;
+}
+
+#main {
+    width: 80%;
+    display: inline-block;
+    float: right;
+}
+
+#single div {
+    height: 100px;
+}
+#double>div>div {
+    width: 100%;
+}
+
+#double>div>div>div {
+    padding-bottom: 50%;
+    height: 0;
+}
+
+#double>div>div:nth-child(2)>div:after {
+    content: 'Shopping';
+}
+
+#triple>div>div {
+    width: 100%;
+}
+
+#triple>div>div>div {
+    padding-bottom: 50%;
+    height: 0;
+}
+
+#quadruple>div>div {
+    width: 100%;
+}
+#single div:nth-child(1)>div:nth-child(1) {
+    background: #e6cdd2;
+}
+#single div:nth-child(2)>h1:before {
+    content: '1';
+}
+#single div:nth-child(2)>p:before {
+    content: '#e6cdd2';
+}
+#single div:nth-child(3)>div:nth-child(1) {
+    background: #dabbc1;
+}
+#single div:nth-child(4)>h1:before {
+    content: '2';
+}
+#single div:nth-child(4)>p:before {
+    content: '#dabbc1';
+}
+#single div:nth-child(5)>div:nth-child(1) {
+    background: #f2e6ec;
+}
+#single div:nth-child(6)>h1:before {
+    content: '3';
+}
+#single div:nth-child(6)>p:before {
+    content: '#f2e6ec';
+}
+#single div:nth-child(7)>div:nth-child(1) {
+    background: #d7e0d5;
+}
+#single div:nth-child(8)>h1:before {
+    content: '4';
+}
+#single div:nth-child(8)>p:before {
+    content: '#d7e0d5';
+}
+#single div:nth-child(9)>div:nth-child(1) {
+    background: #e3d4bf;
+}
+#single div:nth-child(10)>h1:before {
+    content: '5';
+}
+#single div:nth-child(10)>p:before {
+    content: '#e3d4bf';
+}
+#single div:nth-child(11)>div:nth-child(1) {
+    background: #f6f3e9;
+}
+#single div:nth-child(12)>h1:before {
+    content: '6';
+}
+#single div:nth-child(12)>p:before {
+    content: '#f6f3e9';
+}
+#single div:nth-child(13)>div:nth-child(1) {
+    background: #c0c9bf;
+}
+#single div:nth-child(14)>h1:before {
+    content: '7';
+}
+#single div:nth-child(14)>p:before {
+    content: '#c0c9bf';
+}
+#single div:nth-child(15)>div:nth-child(1) {
+    background: #d6c4c0;
+}
+#single div:nth-child(16)>h1:before {
+    content: '8';
+}
+#single div:nth-child(16)>p:before {
+    content: '#d6c4c0';
+}
+#single div:nth-child(17)>div:nth-child(1) {
+    background: #d8cfde;
+}
+#single div:nth-child(18)>h1:before {
+    content: '9';
+}
+#single div:nth-child(18)>p:before {
+    content: '#d8cfde';
+}
+#double>div:nth-child(1)>div:nth-child(1)>div {
+    background: linear-gradient(154deg, #f6f3e9 50%, #e6cdd2 0);
+}
+#double>div:nth-child(1)>div:nth-child(2)>div {
+    background: #e6cdd2;
+    color: #f6f3e9;
+    line-height: 60px;
+    font-size: 18px;
+    text-align: center;
+}
+#double>div:nth-child(1)>div:nth-child(3)>div {
+    background: linear-gradient(90deg, #f6f3e9 50%, #e6cdd2 0);
+    background-size: 20% 100px;
+}
+#double>div:nth-child(1)>div:nth-child(4)>div {
+    background: linear-gradient(154deg, #f6f3e9 50%, #e6cdd2 0);
+}
+#double>div:nth-child(2)>div:nth-child(1)>div {
+    background: linear-gradient(154deg, #dabbc1 50%, #f2e6ec 0);
+}
+#double>div:nth-child(2)>div:nth-child(2)>div {
+    background: #f2e6ec;
+    color: #dabbc1;
+    line-height: 60px;
+    font-size: 18px;
+    text-align: center;
+}
+#double>div:nth-child(2)>div:nth-child(3)>div {
+    background: linear-gradient(90deg, #dabbc1 50%, #f2e6ec 0);
+    background-size: 20% 100px;
+}
+#double>div:nth-child(2)>div:nth-child(4)>div {
+    background: linear-gradient(154deg, #dabbc1 50%, #f2e6ec 0);
+}
+#double>div:nth-child(3)>div:nth-child(1)>div {
+    background: linear-gradient(154deg, #f2e6ec 50%, #d8cfde 0);
+}
+#double>div:nth-child(3)>div:nth-child(2)>div {
+    background: #d8cfde;
+    color: #f2e6ec;
+    line-height: 60px;
+    font-size: 18px;
+    text-align: center;
+}
+#double>div:nth-child(3)>div:nth-child(3)>div {
+    background: linear-gradient(90deg, #f2e6ec 50%, #d8cfde 0);
+    background-size: 20% 100px;
+}
+#double>div:nth-child(3)>div:nth-child(4)>div {
+    background: linear-gradient(154deg, #f2e6ec 50%, #d8cfde 0);
+}
+#double>div:nth-child(4)>div:nth-child(1)>div {
+    background: linear-gradient(154deg, #e3d4bf 50%, #f6f3e9 0);
+}
+#double>div:nth-child(4)>div:nth-child(2)>div {
+    background: #f6f3e9;
+    color: #e3d4bf;
+    line-height: 60px;
+    font-size: 18px;
+    text-align: center;
+}
+#double>div:nth-child(4)>div:nth-child(3)>div {
+    background: linear-gradient(90deg, #e3d4bf 50%, #f6f3e9 0);
+    background-size: 20% 100px;
+}
+#double>div:nth-child(4)>div:nth-child(4)>div {
+    background: linear-gradient(154deg, #e3d4bf 50%, #f6f3e9 0);
+}
+#double>div:nth-child(5)>div:nth-child(1)>div {
+    background: linear-gradient(154deg, #d6c4c0 50%, #d7e0d5 0);
+}
+#double>div:nth-child(5)>div:nth-child(2)>div {
+    background: #d7e0d5;
+    color: #d6c4c0;
+    line-height: 60px;
+    font-size: 18px;
+    text-align: center;
+}
+#double>div:nth-child(5)>div:nth-child(3)>div {
+    background: linear-gradient(90deg, #d6c4c0 50%, #d7e0d5 0);
+    background-size: 20% 100px;
+}
+#double>div:nth-child(5)>div:nth-child(4)>div {
+    background: linear-gradient(154deg, #d6c4c0 50%, #d7e0d5 0);
+}
+#double>div:nth-child(6)>div:nth-child(1)>div {
+    background: linear-gradient(154deg, #c0c9bf 50%, #f2e6ec 0);
+}
+#double>div:nth-child(6)>div:nth-child(2)>div {
+    background: #f2e6ec;
+    color: #c0c9bf;
+    line-height: 60px;
+    font-size: 18px;
+    text-align: center;
+}
+#double>div:nth-child(6)>div:nth-child(3)>div {
+    background: linear-gradient(90deg, #c0c9bf 50%, #f2e6ec 0);
+    background-size: 20% 100px;
+}
+#double>div:nth-child(6)>div:nth-child(4)>div {
+    background: linear-gradient(154deg, #c0c9bf 50%, #f2e6ec 0);
+}
+#triple>div:nth-child(1)>div:nth-child(1)>div {
+    background: linear-gradient(45deg, #f6f3e9 35%, #e6cdd2 35% 70%, #d7e0d5 70%);
+    background-size: 100% 100%;
+}
+
+#triple>div:nth-child(1)>div:nth-child(2)>div {
+    background: linear-gradient(180deg, #f6f3e9 80%, #e6cdd2 0);
+    color: #d7e0d5;
+    line-height: 60px;
+    font-size: 18px;
+    text-align: center;
+}
+
+#triple>div:nth-child(1)>div:nth-child(3)>div {
+    background: linear-gradient(90deg, #f6f3e9 26%, #e6cdd2 26% 74%, #d7e0d5 74%);
+    background-size: 35% 500px;
+}
+
+#triple>div:nth-child(1)>div:nth-child(4)>div {
+    background: linear-gradient(154deg, #f55 50%, #55f 0);
+}
+#triple>div:nth-child(2)>div:nth-child(1)>div {
+    background: linear-gradient(45deg, #dabbc1 35%, #f2e6ec 35% 70%, #e3d4bf 70%);
+    background-size: 100% 100%;
+}
+
+#triple>div:nth-child(2)>div:nth-child(2)>div {
+    background: linear-gradient(180deg, #dabbc1 80%, #f2e6ec 0);
+    color: #e3d4bf;
+    line-height: 60px;
+    font-size: 18px;
+    text-align: center;
+}
+
+#triple>div:nth-child(2)>div:nth-child(3)>div {
+    background: linear-gradient(90deg, #dabbc1 26%, #f2e6ec 26% 74%, #e3d4bf 74%);
+    background-size: 35% 500px;
+}
+
+#triple>div:nth-child(2)>div:nth-child(4)>div {
+    background: linear-gradient(154deg, #f55 50%, #55f 0);
+}
+#triple>div:nth-child(3)>div:nth-child(1)>div {
+    background: linear-gradient(45deg, #f2e6ec 35%, #d8cfde 35% 70%, #dabbc1 70%);
+    background-size: 100% 100%;
+}
+
+#triple>div:nth-child(3)>div:nth-child(2)>div {
+    background: linear-gradient(180deg, #f2e6ec 80%, #d8cfde 0);
+    color: #dabbc1;
+    line-height: 60px;
+    font-size: 18px;
+    text-align: center;
+}
+
+#triple>div:nth-child(3)>div:nth-child(3)>div {
+    background: linear-gradient(90deg, #f2e6ec 26%, #d8cfde 26% 74%, #dabbc1 74%);
+    background-size: 35% 500px;
+}
+
+#triple>div:nth-child(3)>div:nth-child(4)>div {
+    background: linear-gradient(154deg, #f55 50%, #55f 0);
+}
+#triple>div:nth-child(4)>div:nth-child(1)>div {
+    background: linear-gradient(45deg, #e3d4bf 35%, #f6f3e9 35% 70%, #d6c4c0 70%);
+    background-size: 100% 100%;
+}
+
+#triple>div:nth-child(4)>div:nth-child(2)>div {
+    background: linear-gradient(180deg, #e3d4bf 80%, #f6f3e9 0);
+    color: #d6c4c0;
+    line-height: 60px;
+    font-size: 18px;
+    text-align: center;
+}
+
+#triple>div:nth-child(4)>div:nth-child(3)>div {
+    background: linear-gradient(90deg, #e3d4bf 26%, #f6f3e9 26% 74%, #d6c4c0 74%);
+    background-size: 35% 500px;
+}
+
+#triple>div:nth-child(4)>div:nth-child(4)>div {
+    background: linear-gradient(154deg, #f55 50%, #55f 0);
+}
+#triple>div:nth-child(5)>div:nth-child(1)>div {
+    background: linear-gradient(45deg, #d6c4c0 35%, #d7e0d5 35% 70%, #f6f3e9 70%);
+    background-size: 100% 100%;
+}
+
+#triple>div:nth-child(5)>div:nth-child(2)>div {
+    background: linear-gradient(180deg, #d6c4c0 80%, #d7e0d5 0);
+    color: #f6f3e9;
+    line-height: 60px;
+    font-size: 18px;
+    text-align: center;
+}
+
+#triple>div:nth-child(5)>div:nth-child(3)>div {
+    background: linear-gradient(90deg, #d6c4c0 26%, #d7e0d5 26% 74%, #f6f3e9 74%);
+    background-size: 35% 500px;
+}
+
+#triple>div:nth-child(5)>div:nth-child(4)>div {
+    background: linear-gradient(154deg, #f55 50%, #55f 0);
+}
+#triple>div:nth-child(6)>div:nth-child(1)>div {
+    background: linear-gradient(45deg, #c0c9bf 35%, #f2e6ec 35% 70%, #dabbc1 70%);
+    background-size: 100% 100%;
+}
+
+#triple>div:nth-child(6)>div:nth-child(2)>div {
+    background: linear-gradient(180deg, #c0c9bf 80%, #f2e6ec 0);
+    color: #dabbc1;
+    line-height: 60px;
+    font-size: 18px;
+    text-align: center;
+}
+
+#triple>div:nth-child(6)>div:nth-child(3)>div {
+    background: linear-gradient(90deg, #c0c9bf 26%, #f2e6ec 26% 74%, #dabbc1 74%);
+    background-size: 35% 500px;
+}
+
+#triple>div:nth-child(6)>div:nth-child(4)>div {
+    background: linear-gradient(154deg, #f55 50%, #55f 0);
+}
+#quadruple>div:nth-child(1)>div>div {
+    padding-bottom: 200%;
+    height: 0;
+    background: linear-gradient(30deg, #f6f3e9 26%, #e6cdd2 26% 50%, #d7e0d5 50% 74%, #dabbc1 74%);
+}
+#quadruple>div:nth-child(2)>div>div {
+    padding-bottom: 200%;
+    height: 0;
+    background: linear-gradient(30deg, #dabbc1 26%, #f2e6ec 26% 50%, #e3d4bf 50% 74%, #d7e0d5 74%);
+}
+#quadruple>div:nth-child(3)>div>div {
+    padding-bottom: 200%;
+    height: 0;
+    background: linear-gradient(30deg, #f2e6ec 26%, #d8cfde 26% 50%, #dabbc1 50% 74%, #f6f3e9 74%);
+}
+#quadruple>div:nth-child(4)>div>div {
+    padding-bottom: 200%;
+    height: 0;
+    background: linear-gradient(30deg, #e3d4bf 26%, #f6f3e9 26% 50%, #d6c4c0 50% 74%, #d8cfde 74%);
+}
+#quadruple>div:nth-child(5)>div>div {
+    padding-bottom: 200%;
+    height: 0;
+    background: linear-gradient(30deg, #d6c4c0 26%, #d7e0d5 26% 50%, #f6f3e9 50% 74%, #e6cdd2 74%);
+}
+#quadruple>div:nth-child(6)>div>div {
+    padding-bottom: 200%;
+    height: 0;
+    background: linear-gradient(30deg, #c0c9bf 26%, #f2e6ec 26% 50%, #dabbc1 50% 74%, #f6f3e9 74%);
+}.header-desc h1:before{content: '古典浪漫'}.header-desc p:before{content: '此主题的配色灵感来自古典华丽的洛可可风格。以玫瑰红、粉、绿色为基础，降低彩度，变成Dusty-pastel色，便呈现出一种古典装饰似的感觉'}

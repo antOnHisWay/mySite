@@ -1,0 +1,38 @@
+{{extend './layout.art'}}
+
+{{block 'content'}}
+    <h1>{{title}}</h1>
+
+    <div class="ingredients">
+        {{each ingredients v k}} {{v}} {{/each}}
+    </div>
+
+    <img src="{{hero}}" class="hero">
+
+    <div class="steps">
+        <ol>
+            {{each steps v k}}
+                <li>{{v.name}}</li>
+            {{/each}}
+        </ol>
+    </div>
+
+    <div class="steps-image">
+        {{each steps v k}}
+            <img src="{{v.src}}">
+        {{/each}}
+    </div>
+
+    <div class="flavor">
+        <ol>
+            {{each flavor v k}}
+                <li>{{v}}</li>
+            {{/each}}
+        </ol>
+    </div>
+
+    <div class="tips">
+        <h1>{{tips.title}}</h1>
+        <p>{{tips.detail}}</p>
+    </div>
+{{/block}}

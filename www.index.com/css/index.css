@@ -1,0 +1,50 @@
+#app {
+    background: rgba(46, 77, 90, 0.65);
+}
+
+#search-input-text {
+    width: 550px;
+    height: 44px;
+    flex-shrink: 0;
+    border-radius: 22px 0px 0px 22px;
+    background: #FFF;
+    border: none;
+}
+
+#search-submit-button {
+    width: 100px;
+    height: 46px;
+    flex-shrink: 0;
+    border-radius: 0px 22px 22px 0px;
+    background: #225266;
+    position: relative;
+    left: -10px;
+    border: none;
+}
+
+.index-list {
+    margin: 40px 0;
+}
+
+.index-list>div {
+    margin-top: 40px;
+}
+
+.index-list img{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: block;
+}
+
+.index-list p {
+    font-family: Inter;
+    text-align: center;
+    color: #FFF;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    margin-top: 12px;
+}

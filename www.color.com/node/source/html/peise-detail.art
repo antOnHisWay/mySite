@@ -1,0 +1,199 @@
+{{extend './layout.art'}}
+
+{{block 'head'}}
+<link rel="stylesheet" href="{{meta.css}}">
+{{/block}}
+
+{{block 'content'}}
+<div id="main" class="w-75 float-start">
+    <div class="m-2 header-desc">
+        <h1></h1>
+        <p></p>
+    </div>
+
+    <div class="color-header m-2" id="single-header">单色</div>
+    <div class="row m-2 gx-2" id="single">
+        <div class="col-2 mt-2">
+            <div></div>
+        </div>
+        <div class="col-2 mt-2">
+            <h1></h1>
+            <p></p>
+        </div>
+        <div class="col-2 mt-2">
+            <div></div>
+        </div>
+        <div class="col-2 mt-2">
+            <h1></h1>
+            <p></p>
+        </div>
+        <div class="col-2 mt-2">
+            <div></div>
+        </div>
+        <div class="col-2 mt-2">
+            <h1></h1>
+            <p></p>
+        </div>
+
+        <div class="col-2 mt-2">
+            <div></div>
+        </div>
+        <div class="col-2 mt-2">
+            <h1></h1>
+            <p></p>
+        </div>
+        <div class="col-2 mt-2">
+            <div></div>
+        </div>
+        <div class="col-2 mt-2">
+            <h1></h1>
+            <p></p>
+        </div>
+        <div class="col-2 mt-2">
+            <div></div>
+        </div>
+        <div class="col-2 mt-2">
+            <h1></h1>
+            <p></p>
+        </div>
+
+        <div class="col-2 mt-2">
+            <div></div>
+        </div>
+        <div class="col-2 mt-2">
+            <h1></h1>
+            <p></p>
+        </div>
+        <div class="col-2 mt-2">
+            <div></div>
+        </div>
+        <div class="col-2 mt-2">
+            <h1></h1>
+            <p></p>
+        </div>
+        <div class="col-2 mt-2">
+            <div></div>
+        </div>
+        <div class="col-2 mt-2">
+            <h1></h1>
+            <p></p>
+        </div>
+    </div>
+
+    <div class="color-header m-2" id="double-header">双色</div>
+    <div class="row m-2 gx-2" id="double">
+        <div class="col-2 mt-2">
+            <div class="mt-2"><div></div></div>
+            <div class="mt-2"><div></div></div>
+            <div class="mt-2"><div></div></div>
+            <div class="mt-2"><div></div></div>
+        </div>
+
+        <div class="col-2 mt-2">
+            <div class="mt-2"><div></div></div>
+            <div class="mt-2"><div></div></div>
+            <div class="mt-2"><div></div></div>
+            <div class="mt-2"><div></div></div>
+        </div>
+
+        <div class="col-2 mt-2">
+            <div class="mt-2"><div></div></div>
+            <div class="mt-2"><div></div></div>
+            <div class="mt-2"><div></div></div>
+            <div class="mt-2"><div></div></div>
+        </div>
+
+        <div class="col-2 mt-2">
+            <div class="mt-2"><div></div></div>
+            <div class="mt-2"><div></div></div>
+            <div class="mt-2"><div></div></div>
+            <div class="mt-2"><div></div></div>
+        </div>
+
+        <div class="col-2 mt-2">
+            <div class="mt-2"><div></div></div>
+            <div class="mt-2"><div></div></div>
+            <div class="mt-2"><div></div></div>
+            <div class="mt-2"><div></div></div>
+        </div>
+
+        <div class="col-2 mt-2">
+            <div class="mt-2"><div></div></div>
+            <div class="mt-2"><div></div></div>
+            <div class="mt-2"><div></div></div>
+            <div class="mt-2"><div></div></div>
+        </div>
+    </div>
+
+    <div class="color-header m-2" id="triple-header">三色</div>
+    <div class="row m-2 gx-2" id="triple">
+        <div class="col-2 mt-2">
+            <div class="mt-2"><div></div></div>
+            <div class="mt-2"><div></div></div>
+            <div class="mt-2"><div></div></div>
+            <div class="mt-2"><div></div></div>
+        </div>
+        <div class="col-2 mt-2">
+            <div class="mt-2"><div></div></div>
+            <div class="mt-2"><div></div></div>
+            <div class="mt-2"><div></div></div>
+            <div class="mt-2"><div></div></div>
+        </div>
+        <div class="col-2 mt-2">
+            <div class="mt-2"><div></div></div>
+            <div class="mt-2"><div></div></div>
+            <div class="mt-2"><div></div></div>
+            <div class="mt-2"><div></div></div>
+        </div>
+        <div class="col-2 mt-2">
+            <div class="mt-2"><div></div></div>
+            <div class="mt-2"><div></div></div>
+            <div class="mt-2"><div></div></div>
+            <div class="mt-2"><div></div></div>
+        </div>
+        <div class="col-2 mt-2">
+            <div class="mt-2"><div></div></div>
+            <div class="mt-2"><div></div></div>
+            <div class="mt-2"><div></div></div>
+            <div class="mt-2"><div></div></div>
+        </div>
+        <div class="col-2 mt-2">
+            <div class="mt-2"><div></div></div>
+            <div class="mt-2"><div></div></div>
+            <div class="mt-2"><div></div></div>
+            <div class="mt-2"><div></div></div>
+        </div>
+    </div>
+
+    <div class="color-header m-2" id="quadruple-header">四色</div>
+    <div class="row m-2 gx-2" id="quadruple">
+        <div class="col-2 mt-2">
+            <div class="mt-2"><div></div></div>
+        </div>
+        <div class="col-2 mt-2">
+            <div class="mt-2"><div></div></div>
+        </div>
+        <div class="col-2 mt-2">
+            <div class="mt-2"><div></div></div>
+        </div>
+        <div class="col-2 mt-2">
+            <div class="mt-2"><div></div></div>
+        </div>
+        <div class="col-2 mt-2">
+            <div class="mt-2"><div></div></div>
+        </div>
+        <div class="col-2 mt-2">
+            <div class="mt-2"><div></div></div>
+        </div>
+    </div>
+</div>
+
+<div id="sidebar" class="w-20 float-end">
+    <ul class="px-0">
+        <li data-index="0" class="px-4"><a href="#single-header">单色</a></li>
+        <li data-index="1" class="px-4"><a href="#double-header">双色</a></li>
+        <li data-index="2" class="px-4"><a href="#triple-header">三色</a></li>
+        <li data-index="3" class="px-4"><a href="#quadruple-header">四色</a></li>
+    </ul>
+</div>
+{{/block}}

@@ -3,17 +3,20 @@
     box-sizing: border-box;
 }
 
-#sidebar {
-    width: 10%;
-    margin-right: 10%;
-    display: inline-block;
-    background: rgba(0,0,0,0.3);
-    height: 800px;
+.container {
+    max-width: 1200px;
 }
 
-#sidebar ul {
-    padding: 0;
+.container #main, .container #sidebar {
+    margin-top: 150px;
 }
+
+#sidebar {
+    display: inline-block;
+    background: rgba(0,0,0,0.3);
+    text-align: center;
+}
+
 
 #sidebar ul li {
     text-decoration: none;
@@ -31,7 +34,7 @@
 #sidebar a {
     text-underline: none;
     text-decoration: none;
-    color: #0a0a0a;
+    color: #ff00ff;
     font-size: 22px;
 }
 
@@ -79,203 +82,203 @@
     width: 100%;
 }
 #single div:nth-child(1)>div:nth-child(1) {
-    background: #ff0000;
+    background: #e3b3ce;
 }
 #single div:nth-child(2)>h1:before {
     content: '1';
 }
 #single div:nth-child(2)>p:before {
-    content: '#ff0000';
+    content: '#e3b3ce';
 }
 #single div:nth-child(3)>div:nth-child(1) {
-    background: #00ff00;
+    background: #b0d8f5;
 }
 #single div:nth-child(4)>h1:before {
     content: '2';
 }
 #single div:nth-child(4)>p:before {
-    content: '#00ff00';
+    content: '#b0d8f5';
 }
 #single div:nth-child(5)>div:nth-child(1) {
-    background: #0000ff;
+    background: #fcf09a;
 }
 #single div:nth-child(6)>h1:before {
     content: '3';
 }
 #single div:nth-child(6)>p:before {
-    content: '#0000ff';
+    content: '#fcf09a';
 }
 #single div:nth-child(7)>div:nth-child(1) {
-    background: #ffff00;
+    background: #aeaed5;
 }
 #single div:nth-child(8)>h1:before {
     content: '4';
 }
 #single div:nth-child(8)>p:before {
-    content: '#ffff00';
+    content: '#aeaed5';
 }
 #single div:nth-child(9)>div:nth-child(1) {
-    background: #00ffff;
+    background: #f1d6a3;
 }
 #single div:nth-child(10)>h1:before {
     content: '5';
 }
 #single div:nth-child(10)>p:before {
-    content: '#00ffff';
+    content: '#f1d6a3';
 }
 #single div:nth-child(11)>div:nth-child(1) {
-    background: #ff00ff;
+    background: #bfdcda;
 }
 #single div:nth-child(12)>h1:before {
     content: '6';
 }
 #single div:nth-child(12)>p:before {
-    content: '#ff00ff';
+    content: '#bfdcda';
 }
 #single div:nth-child(13)>div:nth-child(1) {
-    background: #ff6600;
+    background: #ccde9a;
 }
 #single div:nth-child(14)>h1:before {
     content: '7';
 }
 #single div:nth-child(14)>p:before {
-    content: '#ff6600';
+    content: '#ccde9a';
 }
 #single div:nth-child(15)>div:nth-child(1) {
-    background: #00ff66;
+    background: #dd9cb0;
 }
 #single div:nth-child(16)>h1:before {
     content: '8';
 }
 #single div:nth-child(16)>p:before {
-    content: '#00ff66';
+    content: '#dd9cb0';
 }
 #single div:nth-child(17)>div:nth-child(1) {
-    background: #6600ff;
+    background: #ffffff;
 }
 #single div:nth-child(18)>h1:before {
     content: '9';
 }
 #single div:nth-child(18)>p:before {
-    content: '#6600ff';
+    content: '#ffffff';
 }
 #double>div:nth-child(1)>div:nth-child(1)>div {
-    background: linear-gradient(154deg, #00ff00 50%, #0000ff 0);
+    background: linear-gradient(154deg, #fcf09a 50%, #e3b3ce 0);
 }
 #double>div:nth-child(1)>div:nth-child(2)>div {
-    background: #0000ff;
-    color: #00ff00;
+    background: #e3b3ce;
+    color: #fcf09a;
     line-height: 60px;
     font-size: 18px;
     text-align: center;
 }
 #double>div:nth-child(1)>div:nth-child(3)>div {
-    background: linear-gradient(90deg, #00ff00 50%, #0000ff 0);
+    background: linear-gradient(90deg, #fcf09a 50%, #e3b3ce 0);
     background-size: 20% 100px;
 }
 #double>div:nth-child(1)>div:nth-child(4)>div {
-    background: linear-gradient(154deg, #00ff00 50%, #0000ff 0);
+    background: linear-gradient(154deg, #fcf09a 50%, #e3b3ce 0);
 }
 #double>div:nth-child(2)>div:nth-child(1)>div {
-    background: linear-gradient(154deg, #ff0000 50%, #ff00ff 0);
+    background: linear-gradient(154deg, #ffffff 50%, #b0d8f5 0);
 }
 #double>div:nth-child(2)>div:nth-child(2)>div {
-    background: #ff00ff;
-    color: #ff0000;
+    background: #b0d8f5;
+    color: #ffffff;
     line-height: 60px;
     font-size: 18px;
     text-align: center;
 }
 #double>div:nth-child(2)>div:nth-child(3)>div {
-    background: linear-gradient(90deg, #ff0000 50%, #ff00ff 0);
+    background: linear-gradient(90deg, #ffffff 50%, #b0d8f5 0);
     background-size: 20% 100px;
 }
 #double>div:nth-child(2)>div:nth-child(4)>div {
-    background: linear-gradient(154deg, #ff0000 50%, #ff00ff 0);
+    background: linear-gradient(154deg, #ffffff 50%, #b0d8f5 0);
 }
 #double>div:nth-child(3)>div:nth-child(1)>div {
-    background: linear-gradient(154deg, #00ffff 50%, #0000ff 0);
+    background: linear-gradient(154deg, #dd9cb0 50%, #f1d6a3 0);
 }
 #double>div:nth-child(3)>div:nth-child(2)>div {
-    background: #0000ff;
-    color: #00ffff;
+    background: #f1d6a3;
+    color: #dd9cb0;
     line-height: 60px;
     font-size: 18px;
     text-align: center;
 }
 #double>div:nth-child(3)>div:nth-child(3)>div {
-    background: linear-gradient(90deg, #00ffff 50%, #0000ff 0);
+    background: linear-gradient(90deg, #dd9cb0 50%, #f1d6a3 0);
     background-size: 20% 100px;
 }
 #double>div:nth-child(3)>div:nth-child(4)>div {
-    background: linear-gradient(154deg, #00ffff 50%, #0000ff 0);
+    background: linear-gradient(154deg, #dd9cb0 50%, #f1d6a3 0);
 }
 #double>div:nth-child(4)>div:nth-child(1)>div {
-    background: linear-gradient(154deg, #00ff66 50%, #ffff00 0);
+    background: linear-gradient(154deg, #aeaed5 50%, #bfdcda 0);
 }
 #double>div:nth-child(4)>div:nth-child(2)>div {
-    background: #ffff00;
-    color: #00ff66;
+    background: #bfdcda;
+    color: #aeaed5;
     line-height: 60px;
     font-size: 18px;
     text-align: center;
 }
 #double>div:nth-child(4)>div:nth-child(3)>div {
-    background: linear-gradient(90deg, #00ff66 50%, #ffff00 0);
+    background: linear-gradient(90deg, #aeaed5 50%, #bfdcda 0);
     background-size: 20% 100px;
 }
 #double>div:nth-child(4)>div:nth-child(4)>div {
-    background: linear-gradient(154deg, #00ff66 50%, #ffff00 0);
+    background: linear-gradient(154deg, #aeaed5 50%, #bfdcda 0);
 }
 #double>div:nth-child(5)>div:nth-child(1)>div {
-    background: linear-gradient(154deg, #00ffff 50%, #ff00ff 0);
+    background: linear-gradient(154deg, #e3b3ce 50%, #ffffff 0);
 }
 #double>div:nth-child(5)>div:nth-child(2)>div {
-    background: #ff00ff;
-    color: #00ffff;
+    background: #ffffff;
+    color: #e3b3ce;
     line-height: 60px;
     font-size: 18px;
     text-align: center;
 }
 #double>div:nth-child(5)>div:nth-child(3)>div {
-    background: linear-gradient(90deg, #00ffff 50%, #ff00ff 0);
+    background: linear-gradient(90deg, #e3b3ce 50%, #ffffff 0);
     background-size: 20% 100px;
 }
 #double>div:nth-child(5)>div:nth-child(4)>div {
-    background: linear-gradient(154deg, #00ffff 50%, #ff00ff 0);
+    background: linear-gradient(154deg, #e3b3ce 50%, #ffffff 0);
 }
 #double>div:nth-child(6)>div:nth-child(1)>div {
-    background: linear-gradient(154deg, #0000ff 50%, #ff6600 0);
+    background: linear-gradient(154deg, #fcf09a 50%, #ccde9a 0);
 }
 #double>div:nth-child(6)>div:nth-child(2)>div {
-    background: #ff6600;
-    color: #0000ff;
+    background: #ccde9a;
+    color: #fcf09a;
     line-height: 60px;
     font-size: 18px;
     text-align: center;
 }
 #double>div:nth-child(6)>div:nth-child(3)>div {
-    background: linear-gradient(90deg, #0000ff 50%, #ff6600 0);
+    background: linear-gradient(90deg, #fcf09a 50%, #ccde9a 0);
     background-size: 20% 100px;
 }
 #double>div:nth-child(6)>div:nth-child(4)>div {
-    background: linear-gradient(154deg, #0000ff 50%, #ff6600 0);
+    background: linear-gradient(154deg, #fcf09a 50%, #ccde9a 0);
 }
 #triple>div:nth-child(1)>div:nth-child(1)>div {
-    background: linear-gradient(45deg, #ff0000 35%, #00ff00 35% 70%, #0000ff 70%);
+    background: linear-gradient(45deg, #fcf09a 35%, #e3b3ce 35% 70%, #b0d8f5 70%);
     background-size: 100% 100%;
 }
 
 #triple>div:nth-child(1)>div:nth-child(2)>div {
-    background: linear-gradient(180deg, #ff0000 80%, #00ff00 0);
-    color: #0000ff;
+    background: linear-gradient(180deg, #fcf09a 80%, #e3b3ce 0);
+    color: #b0d8f5;
     line-height: 60px;
     font-size: 18px;
     text-align: center;
 }
 
 #triple>div:nth-child(1)>div:nth-child(3)>div {
-    background: linear-gradient(90deg, #ff0000 26%, #00ff00 26% 74%, #0000ff 74%);
+    background: linear-gradient(90deg, #fcf09a 26%, #e3b3ce 26% 74%, #b0d8f5 74%);
     background-size: 35% 500px;
 }
 
@@ -283,20 +286,20 @@
     background: linear-gradient(154deg, #f55 50%, #55f 0);
 }
 #triple>div:nth-child(2)>div:nth-child(1)>div {
-    background: linear-gradient(45deg, #ffff00 35%, #00ffff 35% 70%, #ff00ff 70%);
+    background: linear-gradient(45deg, #ffffff 35%, #b0d8f5 35% 70%, #e3b3ce 70%);
     background-size: 100% 100%;
 }
 
 #triple>div:nth-child(2)>div:nth-child(2)>div {
-    background: linear-gradient(180deg, #ffff00 80%, #00ffff 0);
-    color: #ff00ff;
+    background: linear-gradient(180deg, #ffffff 80%, #b0d8f5 0);
+    color: #e3b3ce;
     line-height: 60px;
     font-size: 18px;
     text-align: center;
 }
 
 #triple>div:nth-child(2)>div:nth-child(3)>div {
-    background: linear-gradient(90deg, #ffff00 26%, #00ffff 26% 74%, #ff00ff 74%);
+    background: linear-gradient(90deg, #ffffff 26%, #b0d8f5 26% 74%, #e3b3ce 74%);
     background-size: 35% 500px;
 }
 
@@ -304,20 +307,20 @@
     background: linear-gradient(154deg, #f55 50%, #55f 0);
 }
 #triple>div:nth-child(3)>div:nth-child(1)>div {
-    background: linear-gradient(45deg, #ffff00 35%, #00ff00 35% 70%, #ff6600 70%);
+    background: linear-gradient(45deg, #dd9cb0 35%, #f1d6a3 35% 70%, #bfdcda 70%);
     background-size: 100% 100%;
 }
 
 #triple>div:nth-child(3)>div:nth-child(2)>div {
-    background: linear-gradient(180deg, #ffff00 80%, #00ff00 0);
-    color: #ff6600;
+    background: linear-gradient(180deg, #dd9cb0 80%, #f1d6a3 0);
+    color: #bfdcda;
     line-height: 60px;
     font-size: 18px;
     text-align: center;
 }
 
 #triple>div:nth-child(3)>div:nth-child(3)>div {
-    background: linear-gradient(90deg, #ffff00 26%, #00ff00 26% 74%, #ff6600 74%);
+    background: linear-gradient(90deg, #dd9cb0 26%, #f1d6a3 26% 74%, #bfdcda 74%);
     background-size: 35% 500px;
 }
 
@@ -325,20 +328,20 @@
     background: linear-gradient(154deg, #f55 50%, #55f 0);
 }
 #triple>div:nth-child(4)>div:nth-child(1)>div {
-    background: linear-gradient(45deg, #00ff66 35%, #ffff00 35% 70%, #00ffff 70%);
+    background: linear-gradient(45deg, #aeaed5 35%, #bfdcda 35% 70%, #ffffff 70%);
     background-size: 100% 100%;
 }
 
 #triple>div:nth-child(4)>div:nth-child(2)>div {
-    background: linear-gradient(180deg, #00ff66 80%, #ffff00 0);
-    color: #00ffff;
+    background: linear-gradient(180deg, #aeaed5 80%, #bfdcda 0);
+    color: #ffffff;
     line-height: 60px;
     font-size: 18px;
     text-align: center;
 }
 
 #triple>div:nth-child(4)>div:nth-child(3)>div {
-    background: linear-gradient(90deg, #00ff66 26%, #ffff00 26% 74%, #00ffff 74%);
+    background: linear-gradient(90deg, #aeaed5 26%, #bfdcda 26% 74%, #ffffff 74%);
     background-size: 35% 500px;
 }
 
@@ -346,20 +349,20 @@
     background: linear-gradient(154deg, #f55 50%, #55f 0);
 }
 #triple>div:nth-child(5)>div:nth-child(1)>div {
-    background: linear-gradient(45deg, #ff00ff 35%, #ff6600 35% 70%, #0000ff 70%);
+    background: linear-gradient(45deg, #e3b3ce 35%, #ffffff 35% 70%, #aeaed5 70%);
     background-size: 100% 100%;
 }
 
 #triple>div:nth-child(5)>div:nth-child(2)>div {
-    background: linear-gradient(180deg, #ff00ff 80%, #ff6600 0);
-    color: #0000ff;
+    background: linear-gradient(180deg, #e3b3ce 80%, #ffffff 0);
+    color: #aeaed5;
     line-height: 60px;
     font-size: 18px;
     text-align: center;
 }
 
 #triple>div:nth-child(5)>div:nth-child(3)>div {
-    background: linear-gradient(90deg, #ff00ff 26%, #ff6600 26% 74%, #0000ff 74%);
+    background: linear-gradient(90deg, #e3b3ce 26%, #ffffff 26% 74%, #aeaed5 74%);
     background-size: 35% 500px;
 }
 
@@ -367,20 +370,20 @@
     background: linear-gradient(154deg, #f55 50%, #55f 0);
 }
 #triple>div:nth-child(6)>div:nth-child(1)>div {
-    background: linear-gradient(45deg, #00ffff 35%, #00ff66 35% 70%, #00ff00 70%);
+    background: linear-gradient(45deg, #fcf09a 35%, #ccde9a 35% 70%, #e3b3ce 70%);
     background-size: 100% 100%;
 }
 
 #triple>div:nth-child(6)>div:nth-child(2)>div {
-    background: linear-gradient(180deg, #00ffff 80%, #00ff66 0);
-    color: #00ff00;
+    background: linear-gradient(180deg, #fcf09a 80%, #ccde9a 0);
+    color: #e3b3ce;
     line-height: 60px;
     font-size: 18px;
     text-align: center;
 }
 
 #triple>div:nth-child(6)>div:nth-child(3)>div {
-    background: linear-gradient(90deg, #00ffff 26%, #00ff66 26% 74%, #00ff00 74%);
+    background: linear-gradient(90deg, #fcf09a 26%, #ccde9a 26% 74%, #e3b3ce 74%);
     background-size: 35% 500px;
 }
 
@@ -390,30 +393,30 @@
 #quadruple>div:nth-child(1)>div>div {
     padding-bottom: 200%;
     height: 0;
-    background: linear-gradient(30deg, #ff0000 26%, #00ff00 26% 50%, #0000ff 50% 74%, #ffff00 74%);
+    background: linear-gradient(30deg, #fcf09a 26%, #e3b3ce 26% 50%, #b0d8f5 50% 74%, #aeaed5 74%);
 }
 #quadruple>div:nth-child(2)>div>div {
     padding-bottom: 200%;
     height: 0;
-    background: linear-gradient(30deg, #ffff00 26%, #0000ff 26% 50%, #ff00ff 50% 74%, #00ff00 74%);
+    background: linear-gradient(30deg, #ffffff 26%, #b0d8f5 26% 50%, #e3b3ce 50% 74%, #fcf09a 74%);
 }
 #quadruple>div:nth-child(3)>div>div {
     padding-bottom: 200%;
     height: 0;
-    background: linear-gradient(30deg, #ff6600 26%, #00ffff 26% 50%, #0000ff 50% 74%, #00ff00 74%);
+    background: linear-gradient(30deg, #dd9cb0 26%, #f1d6a3 26% 50%, #bfdcda 50% 74%, #aeaed5 74%);
 }
 #quadruple>div:nth-child(4)>div>div {
     padding-bottom: 200%;
     height: 0;
-    background: linear-gradient(30deg, #00ffff 26%, #ff00ff 26% 50%, #ffff00 50% 74%, #00ff00 74%);
+    background: linear-gradient(30deg, #aeaed5 26%, #bfdcda 26% 50%, #ffffff 50% 74%, #fcf09a 74%);
 }
 #quadruple>div:nth-child(5)>div>div {
     padding-bottom: 200%;
     height: 0;
-    background: linear-gradient(30deg, #00ff66 26%, #00ff00 26% 50%, #0000ff 50% 74%, #ffff00 74%);
+    background: linear-gradient(30deg, #e3b3ce 26%, #ffffff 26% 50%, #aeaed5 50% 74%, #b0d8f5 74%);
 }
 #quadruple>div:nth-child(6)>div>div {
     padding-bottom: 200%;
     height: 0;
-    background: linear-gradient(30deg, #00ff00 26%, #ff00ff 26% 50%, #ff6600 50% 74%, #00ffff 74%);
+    background: linear-gradient(30deg, #fcf09a 26%, #ccde9a 26% 50%, #e3b3ce 50% 74%, #b0d8f5 74%);
 }.header-desc h1:before{content: '棉花糖'}.header-desc p:before{content: '仿佛棉花糖般五彩缤纷，青春靓丽的色彩搭配，利用明亮的粉、蓝、黄等颜色相互搭配，可以给人留下温柔、甜美的印象。'}

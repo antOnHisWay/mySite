@@ -1,0 +1,12 @@
+{{extend './layout.art'}}
+
+{{block 'content'}}
+    <h1>{{title}}</h1>
+
+    <img src="" id="abc">
+
+    <form method="post">
+        <input type="file" onchange="alert($(this).val());$('#abc').attr('src', $(this).val());" name="abc">
+        <button type="submit">分析图片</button>
+    </form>
+{{/block}}

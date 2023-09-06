@@ -1,0 +1,9 @@
+{{extend './layout.art'}}
+
+{{block 'content'}}
+
+    {{each soups val key}}
+        <h1><a href="./{{val['name']}}.html">{{val['title']}}</a></h1>
+    {{/each}}
+
+{{/block}}

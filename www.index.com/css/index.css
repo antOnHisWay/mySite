@@ -1,6 +1,12 @@
 #app {
     background: rgba(46, 77, 90, 0.65);
+    min-height: 100%;
 }
+
+#main {
+    min-height: 850px;
+}
+
 
 #search-input-text {
     width: 550px;
@@ -31,11 +37,20 @@
 }
 
 .index-list img{
+    box-sizing: border-box;
     width: 120px;
     height: 120px;
+    padding: 5px;
     border-radius: 50%;
     margin: 0 auto;
     display: block;
+}
+
+.index-list img:hover {
+    box-sizing: border-box;
+    width: 120px;
+    height: 120px;
+    padding: 1px;
 }
 
 .index-list p {

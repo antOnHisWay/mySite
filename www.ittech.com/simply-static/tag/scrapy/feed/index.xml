@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Scrapy归档 - IT Tech</title>
+	<atom:link href="/abc/tag/scrapy/feed/" rel="self" type="application/rss+xml" />
+	<link>/abc/tag/scrapy/</link>
+	<description></description>
+	<lastBuildDate>Sat, 09 Sep 2023 04:10:10 +0000</lastBuildDate>
+	<language>zh-CN</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.3</generator>
+	<item>
+		<title>scapy 中文输出乱码问题</title>
+		<link>/abc/scapy-%e4%b8%ad%e6%96%87%e8%be%93%e5%87%ba%e4%b9%b1%e7%a0%81%e9%97%ae%e9%a2%98/</link>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Thu, 07 Sep 2023 01:53:58 +0000</pubDate>
+				<category><![CDATA[爬虫]]></category>
+		<category><![CDATA[Scrapy]]></category>
+		<guid isPermaLink="false">/abc/?p=160</guid>
+
+					<description><![CDATA[<p>scrapy crawl spridername -o items.json -s FEED_EXPORT_E [&#8230;]</p>
+<p><a rel="nofollow" href="/abc/scapy-%e4%b8%ad%e6%96%87%e8%be%93%e5%87%ba%e4%b9%b1%e7%a0%81%e9%97%ae%e9%a2%98/">scapy 中文输出乱码问题</a>最先出现在<a rel="nofollow" href="/abc/">IT Tech</a>。</p>
+]]></description>
+										<content:encoded><![CDATA[<div id="article_content" class="article_content clearfix">
+<div id="content_views" class="htmledit_views">
+<p>scrapy crawl spridername -o items.json<strong> -s FEED_EXPORT_ENCODING=utf-8</strong></p>
+</div>
+<div>
+<div></div>
+</div>
+</div>
+<div id="treeSkill">
+<div class="skill-tree-box"></div>
+</div>
+<p><a rel="nofollow" href="/abc/scapy-%e4%b8%ad%e6%96%87%e8%be%93%e5%87%ba%e4%b9%b1%e7%a0%81%e9%97%ae%e9%a2%98/">scapy 中文输出乱码问题</a>最先出现在<a rel="nofollow" href="/abc/">IT Tech</a>。</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

@@ -7,11 +7,11 @@
 	>
 <channel>
 	<title>
-	Comments for IT Tech	</title>
-	<atom:link href="/comments/feed/" rel="self" type="application/rss+xml" />
-	<link>/</link>
+	Comments on: Vue watch 监听多个参数	</title>
+	<atom:link href="/vue-watch-%E7%9B%91%E5%90%AC%E5%A4%9A%E4%B8%AA%E5%8F%82%E6%95%B0/feed/" rel="self" type="application/rss+xml" />
+	<link>/vue-watch-%e7%9b%91%e5%90%ac%e5%a4%9a%e4%b8%aa%e5%8f%82%e6%95%b0/</link>
 	<description></description>
-	<lastBuildDate>Sat, 09 Sep 2023 10:33:44 +0000</lastBuildDate>
+	<lastBuildDate>Sat, 09 Sep 2023 09:16:53 +0000</lastBuildDate>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
 	<sy:updateFrequency>

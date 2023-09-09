@@ -12,7 +12,7 @@
 	<atom:link href="/category/javascript/feed/" rel="self" type="application/rss+xml" />
 	<link>/category/javascript/</link>
 	<description></description>
-	<lastBuildDate>Sat, 09 Sep 2023 04:40:27 +0000</lastBuildDate>
+	<lastBuildDate>Sat, 09 Sep 2023 10:33:44 +0000</lastBuildDate>
 	<language>zh-CN</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -20,6 +20,180 @@
 	1	</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=6.3</generator>
 	<item>
+		<title>Vue 组件不渲染，但是在chrome devtools中点击，又可以渲染了</title>
+		<link>/vue-%e7%bb%84%e4%bb%b6%e4%b8%8d%e6%b8%b2%e6%9f%93%ef%bc%8c%e4%bd%86%e6%98%af%e5%9c%a8chrome-devtools%e4%b8%ad%e7%82%b9%e5%87%bb%ef%bc%8c%e5%8f%88%e5%8f%af%e4%bb%a5%e6%b8%b2%e6%9f%93%e4%ba%86/</link>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Sat, 09 Sep 2023 09:38:08 +0000</pubDate>
+				<category><![CDATA[Javascript]]></category>
+		<guid isPermaLink="false">/?p=225</guid>
+
+					<description><![CDATA[<p>Vue 组件不渲染，但是在chrome devtools中点击，又可以渲染了。出现这种情况，主要是我们在点击chrome devtools中的vue组件过程中，组件依赖的数据是在发生变化的。可能存在的情况如下 如下代码，就发生了上述问题： &#60;template&#62; &#60;div v-if="showImage" class="featured-image-container" :class="[ size ]"&#62; &#60;img :src="processedSrc" alt="Featured Image"&#62; &#60;/div&#62; &#60;/template&#62; &#60;script&#62; export default { props: { image: { type: Object }, size: { type: String, required: true } }, data () { return { showImage: false } }, computed: { processedSrc: function () { if (this.image &#38;&#38; [&#8230;]</p>
+<p><a rel="nofollow" href="/vue-%e7%bb%84%e4%bb%b6%e4%b8%8d%e6%b8%b2%e6%9f%93%ef%bc%8c%e4%bd%86%e6%98%af%e5%9c%a8chrome-devtools%e4%b8%ad%e7%82%b9%e5%87%bb%ef%bc%8c%e5%8f%88%e5%8f%af%e4%bb%a5%e6%b8%b2%e6%9f%93%e4%ba%86/">Vue 组件不渲染，但是在chrome devtools中点击，又可以渲染了</a>最先出现在<a rel="nofollow" href="/">IT Tech</a>。</p>
+]]></description>
+										<content:encoded><![CDATA[<p>Vue 组件不渲染，但是在chrome devtools中点击，又可以渲染了。出现这种情况，主要是我们在点击chrome devtools中的vue组件过程中，组件依赖的数据是在发生变化的。可能存在的情况如下</p>
+<h2>如下代码，就发生了上述问题：</h2>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">&lt;template&gt;
+    &lt;div v-if="showImage" class="featured-image-container" :class="[ size ]"&gt;
+        &lt;img :src="processedSrc" alt="Featured Image"&gt;
+    &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+    props: {
+        image: {
+            type: Object
+        },
+        size: {
+            type: String,
+            required: true
+        }
+    },
+    data () {
+        return {
+            showImage: false
+        }
+    },
+    computed: {
+        processedSrc: function () {
+            if (this.image &amp;&amp; typeof this.image === 'object') {
+                this.showImage = true
+                return this.image.sizes[this.size].file
+            } else {
+                this.showImage = false
+            }
+        }
+    }
+}
+&lt;/script&gt;</pre>
+<p>为什么图片不能展示呢？</p>
+<ul>
+<li>组件中， 参数showImage 初始值为false， 组件使用的是v-if， 意味着节点不会被渲染，它内部的节点也不会被渲染</li>
+<li>组件中，computed 计算属性是lazy-loaded，如果计算属性没有被引用，则属性不会被计算</li>
+<li>可以看到，组件初始化，processedSrc 函数不会被执行，因此图片不会被展示</li>
+</ul>
+<p>在Vue Devtools 中点击组件发生了什么？</p>
+<ul>
+<li>Vue devtools会展示所有的computed参数，意味着所有的computed参数相关函数会被执行</li>
+</ul>
+<h2>上述问题的解决方案</h2>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">computed: {
+  showImage: function() {
+    return this.image &amp;&amp; typeof this.image === 'object';
+  },
+  processedSrc: function () {
+    if (this.showImage) {
+      return this.image.sizes[this.size].file;
+    }
+  }
+}</pre>
+<h2>总结：</h2>
+<ul>
+<li>Vue 使用lazy reactivity 系统，当数据不被引用时，组件的某些更新是不会发生的，然而使用vue devtools，不管数据是否被应用，相关的函数都会被执行</li>
+</ul>
+<h2>参考链接</h2>
+<ul>
+<li><a href="https://devtools.vuejs.org/guide/faq.html#the-data-isn-t-updating-in-the-component-inspector">devtools 常见问题</a></li>
+</ul>
+<p><a rel="nofollow" href="/vue-%e7%bb%84%e4%bb%b6%e4%b8%8d%e6%b8%b2%e6%9f%93%ef%bc%8c%e4%bd%86%e6%98%af%e5%9c%a8chrome-devtools%e4%b8%ad%e7%82%b9%e5%87%bb%ef%bc%8c%e5%8f%88%e5%8f%af%e4%bb%a5%e6%b8%b2%e6%9f%93%e4%ba%86/">Vue 组件不渲染，但是在chrome devtools中点击，又可以渲染了</a>最先出现在<a rel="nofollow" href="/">IT Tech</a>。</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Vue watch 监听多个参数</title>
+		<link>/vue-watch-%e7%9b%91%e5%90%ac%e5%a4%9a%e4%b8%aa%e5%8f%82%e6%95%b0/</link>
+					<comments>/vue-watch-%e7%9b%91%e5%90%ac%e5%a4%9a%e4%b8%aa%e5%8f%82%e6%95%b0/#respond</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Sat, 09 Sep 2023 09:16:53 +0000</pubDate>
+				<category><![CDATA[Javascript]]></category>
+		<guid isPermaLink="false">/?p=221</guid>
+
+					<description><![CDATA[<p>方法一：将多个参数 data () { return { name1: '', name2: '', age: '' } }, watch: { 'name1': function (val) { if (this.name1 === this.name2) { this.$set(this,'age',1) } else { this.$set(this,'age',null) } }, 'name2': function (val) { if (this.name1 === this.name2) { this.$set(this,'age',1) } else { this.$set(this,'age',null) } } } 方法二：使用computed参数 &#60;template&#62; &#60;div class="demo"&#62; &#60;a-button type="primary" [&#8230;]</p>
+<p><a rel="nofollow" href="/vue-watch-%e7%9b%91%e5%90%ac%e5%a4%9a%e4%b8%aa%e5%8f%82%e6%95%b0/">Vue watch 监听多个参数</a>最先出现在<a rel="nofollow" href="/">IT Tech</a>。</p>
+]]></description>
+										<content:encoded><![CDATA[<p>方法一：将多个参数</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">data () {
+      return {
+      		name1: '',
+      		name2: '',
+      		age: ''
+      }
+ },
+ 
+    watch: {
+    	'name1': function (val) {
+      		if (this.name1 === this.name2) {
+            this.$set(this,'age',1)
+          } else {
+            this.$set(this,'age',null)
+          }
+      },
+       'name2': function (val) {
+      		if (this.name1 === this.name2) {
+            this.$set(this,'age',1)
+          } else {
+            this.$set(this,'age',null)
+          }
+      }
+    }
+</pre>
+<p>方法二：使用computed参数</p>
+<pre class="line-numbers  language-xml"><code class="  language-xml"><span class="token tag"><span class="token punctuation">&lt;</span>template<span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token punctuation">&lt;</span>div <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>demo<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token punctuation">&lt;</span>a-button
+      <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>primary<span class="token punctuation">"</span></span>
+      <span class="token attr-name">@click</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>
+        () =&gt; {
+          this.isLace = !this.isLace
+        }
+      <span class="token punctuation">"</span></span>
+    <span class="token punctuation">&gt;</span></span>
+      {{ isOnchange }}
+    <span class="token tag"><span class="token punctuation">&lt;/</span>a-button<span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token punctuation">&lt;/</span>div<span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token punctuation">&lt;/</span>template<span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token punctuation">&lt;</span>script<span class="token punctuation">&gt;</span></span>
+export default {
+  name: 'demo',
+  data() {
+    return {
+      isLace: false,
+      loading: false,
+    }
+  },
+
+  computed: {
+    isOnchange({ isLace, loading }) {
+      //等同于 const { isLace , loading }=this
+      return { isLace, loading }
+    },
+  },
+
+  watch: {
+    //只要有一个值改变都会触发监听
+    isOnchange: function (o, n) {
+      // o改变后的值
+      // �n改变前的值
+      console.log(o, n)
+    },
+  },
+}
+<span class="token tag"><span class="token punctuation">&lt;/</span>script<span class="token punctuation">&gt;</span></span></code></pre>
+<p>方法三：</p>
+<p><a rel="nofollow" href="/vue-watch-%e7%9b%91%e5%90%ac%e5%a4%9a%e4%b8%aa%e5%8f%82%e6%95%b0/">Vue watch 监听多个参数</a>最先出现在<a rel="nofollow" href="/">IT Tech</a>。</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/vue-watch-%e7%9b%91%e5%90%ac%e5%a4%9a%e4%b8%aa%e5%8f%82%e6%95%b0/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
 		<title>Vue 的 watch 不起作用的解决方案</title>
 		<link>/vue-%e7%9a%84-watch-%e4%b8%8d%e8%b5%b7%e4%bd%9c%e7%94%a8%e7%9a%84%e8%a7%a3%e5%86%b3%e6%96%b9%e6%a1%88/</link>
 		
@@ -113,54 +287,6 @@
 		
 			</item>
 		<item>
-		<title>如何将this传给window.setinterval()</title>
-		<link>/%e5%a6%82%e4%bd%95%e5%b0%86this%e4%bc%a0%e7%bb%99window-setinterval/</link>
-		
-		<dc:creator><![CDATA[admin]]></dc:creator>
-		<pubDate>Fri, 08 Sep 2023 09:23:11 +0000</pubDate>
-				<category><![CDATA[Javascript]]></category>
-		<guid isPermaLink="false">/?p=169</guid>
-
-					<description><![CDATA[<p>方法一：将 this 传递给一个变量 function method1() { var self = this; self.b = 1; self.set = setInterval(function() {console.log(self.b);}, 200); } 方法二：使用箭头函数=&#62; 箭头函数，没有自己的this变量，这意味着在箭头函数中使用this，this来自最近的外部变量 function a() { this.b = 1; this.set = setInterval(() =&#62; {console.log(this.b);}, 200); } 方法三： 使用bind() class Person { a() { this.b = 1; this.set = setInterval(function() {console.log(this.b);}, 1000); } c() { this.b = 1; [&#8230;]</p>
-<p><a rel="nofollow" href="/%e5%a6%82%e4%bd%95%e5%b0%86this%e4%bc%a0%e7%bb%99window-setinterval/">如何将this传给window.setinterval()</a>最先出现在<a rel="nofollow" href="/">IT Tech</a>。</p>
-]]></description>
-										<content:encoded><![CDATA[<p>方法一：将 this 传递给一个变量</p>
-<pre class="EnlighterJSRAW" data-enlighter-language="generic">function method1() {
-    var self = this;
-    self.b = 1;
-    self.set = setInterval(function() {console.log(self.b);}, 200);
-}</pre>
-<p>方法二：使用箭头函数=&gt;</p>
-<p>箭头函数，没有自己的this变量，这意味着在箭头函数中使用this，this来自最近的外部变量</p>
-<pre class="EnlighterJSRAW" data-enlighter-language="generic">function a() {
-  this.b = 1;
-  this.set = setInterval(() =&gt; {console.log(this.b);}, 200);
-}</pre>
-<p>方法三： 使用bind()</p>
-<pre class="EnlighterJSRAW" data-enlighter-language="generic">class Person {
-    a() {
-        this.b = 1;
-        this.set = setInterval(function() {console.log(this.b);}, 1000);
-    }
-
-    c() {
-        this.b = 1;
-        this.set = setInterval((function() {console.log(this.b);}).bind(this), 1000);
-    }
-}
-
-p = new Person()
-p.a() //prints undefined
-p.c() //prints 1</pre>
-<p>方法四： 使用apply()</p>
-<p>方法五：使用call()</p>
-<p><a rel="nofollow" href="/%e5%a6%82%e4%bd%95%e5%b0%86this%e4%bc%a0%e7%bb%99window-setinterval/">如何将this传给window.setinterval()</a>最先出现在<a rel="nofollow" href="/">IT Tech</a>。</p>
-]]></content:encoded>
-					
-		
-		
-			</item>
-		<item>
 		<title>Vue组件的watch</title>
 		<link>/vue%e7%bb%84%e4%bb%b6%e7%9a%84watch/</link>
 		
@@ -212,6 +338,54 @@ p.c() //prints 1</pre>
 &lt;/script&gt;</pre>
 <p>&nbsp;</p>
 <p><a rel="nofollow" href="/vue%e7%bb%84%e4%bb%b6%e7%9a%84watch/">Vue组件的watch</a>最先出现在<a rel="nofollow" href="/">IT Tech</a>。</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>如何将this传给window.setinterval()</title>
+		<link>/%e5%a6%82%e4%bd%95%e5%b0%86this%e4%bc%a0%e7%bb%99window-setinterval/</link>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Sat, 08 Jul 2023 09:23:11 +0000</pubDate>
+				<category><![CDATA[Javascript]]></category>
+		<guid isPermaLink="false">/?p=169</guid>
+
+					<description><![CDATA[<p>方法一：将 this 传递给一个变量 function method1() { var self = this; self.b = 1; self.set = setInterval(function() {console.log(self.b);}, 200); } 方法二：使用箭头函数=&#62; 箭头函数，没有自己的this变量，这意味着在箭头函数中使用this，this来自最近的外部变量 function a() { this.b = 1; this.set = setInterval(() =&#62; {console.log(this.b);}, 200); } 方法三： 使用bind() class Person { a() { this.b = 1; this.set = setInterval(function() {console.log(this.b);}, 1000); } c() { this.b = 1; [&#8230;]</p>
+<p><a rel="nofollow" href="/%e5%a6%82%e4%bd%95%e5%b0%86this%e4%bc%a0%e7%bb%99window-setinterval/">如何将this传给window.setinterval()</a>最先出现在<a rel="nofollow" href="/">IT Tech</a>。</p>
+]]></description>
+										<content:encoded><![CDATA[<p>方法一：将 this 传递给一个变量</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">function method1() {
+    var self = this;
+    self.b = 1;
+    self.set = setInterval(function() {console.log(self.b);}, 200);
+}</pre>
+<p>方法二：使用箭头函数=&gt;</p>
+<p>箭头函数，没有自己的this变量，这意味着在箭头函数中使用this，this来自最近的外部变量</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">function a() {
+  this.b = 1;
+  this.set = setInterval(() =&gt; {console.log(this.b);}, 200);
+}</pre>
+<p>方法三： 使用bind()</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">class Person {
+    a() {
+        this.b = 1;
+        this.set = setInterval(function() {console.log(this.b);}, 1000);
+    }
+
+    c() {
+        this.b = 1;
+        this.set = setInterval((function() {console.log(this.b);}).bind(this), 1000);
+    }
+}
+
+p = new Person()
+p.a() //prints undefined
+p.c() //prints 1</pre>
+<p>方法四： 使用apply()</p>
+<p>方法五：使用call()</p>
+<p><a rel="nofollow" href="/%e5%a6%82%e4%bd%95%e5%b0%86this%e4%bc%a0%e7%bb%99window-setinterval/">如何将this传给window.setinterval()</a>最先出现在<a rel="nofollow" href="/">IT Tech</a>。</p>
 ]]></content:encoded>
 					
 		

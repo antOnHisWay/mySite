@@ -1,0 +1,10 @@
+<IfModule mod_rewrite.c>
+
+    RewriteEngine On
+
+    RewriteRule search/(.*)$ /$1.html
+#    RewriteRule search/(.*)$ /public/$1.html
+
+</IfModule>
+
+

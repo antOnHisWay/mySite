@@ -2,8 +2,12 @@
 
     RewriteEngine On
 
-    RewriteRule search/(.*)$ /$1.html
-#    RewriteRule search/(.*)$ /public/$1.html
+
+    RewriteRule search/(.*)$ /$1.html [L]
+
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ /404.html [L]
 
 </IfModule>
 

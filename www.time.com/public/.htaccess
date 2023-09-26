@@ -5,6 +5,7 @@
 
     RewriteRule search/(.*)$ /$1.html [L]
 
+    #catch all method
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteRule ^(.*)$ /404.html [L]

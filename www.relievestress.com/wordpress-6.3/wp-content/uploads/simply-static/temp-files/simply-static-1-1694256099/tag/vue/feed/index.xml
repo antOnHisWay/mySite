@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>VUE归档 - IT Tech</title>
+	<atom:link href="/tag/vue/feed/" rel="self" type="application/rss+xml" />
+	<link>/tag/vue/</link>
+	<description></description>
+	<lastBuildDate>Sat, 09 Sep 2023 04:40:27 +0000</lastBuildDate>
+	<language>zh-CN</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.3</generator>
+	<item>
+		<title>Vue 的 watch 不起作用的解决方案</title>
+		<link>/vue-%e7%9a%84-watch-%e4%b8%8d%e8%b5%b7%e4%bd%9c%e7%94%a8%e7%9a%84%e8%a7%a3%e5%86%b3%e6%96%b9%e6%a1%88/</link>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Sat, 09 Sep 2023 02:55:57 +0000</pubDate>
+				<category><![CDATA[Javascript]]></category>
+		<category><![CDATA[VUE]]></category>
+		<guid isPermaLink="false">/?p=174</guid>
+
+					<description><![CDATA[<p>问题一：是否坚挺参数为object变量，如果是，请设置如下参数 deep：true； &#160; 问题二：watch 函数，默认是懒执行的，仅当数据源变化时，才会执行回调。如果希望在创建侦听器时，立即执行一遍回调，请设置如下参数： immediate：true； &#160; export default { data() { return { a: 1, b: 2, c: { d: 4 }, e: 5, f: 6 } }, watch: { // 侦听根级属性 a(val, oldVal) { console.log(`new: ${val}, old: ${oldVal}`) }, // 字符串方法名称 b: 'someMethod', // 该回调将会在被侦听的对象的属性改变时调动，无论其被嵌套多深 c: { handler(val, oldVal) { console.log('c changed') }, [&#8230;]</p>
+<p><a rel="nofollow" href="/vue-%e7%9a%84-watch-%e4%b8%8d%e8%b5%b7%e4%bd%9c%e7%94%a8%e7%9a%84%e8%a7%a3%e5%86%b3%e6%96%b9%e6%a1%88/">Vue 的 watch 不起作用的解决方案</a>最先出现在<a rel="nofollow" href="/">IT Tech</a>。</p>
+]]></description>
+										<content:encoded><![CDATA[<p>问题一：是否坚挺参数为object变量，如果是，请设置如下参数</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">deep：true；</pre>
+<p>&nbsp;</p>
+<p>问题二：watch 函数，默认是懒执行的，仅当数据源变化时，才会执行回调。如果希望在创建侦听器时，立即执行一遍回调，请设置如下参数：</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">immediate：true；</pre>
+<p>&nbsp;</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">export default {
+  data() {
+    return {
+      a: 1,
+      b: 2,
+      c: {
+        d: 4
+      },
+      e: 5,
+      f: 6
+    }
+  },
+  watch: {
+    // 侦听根级属性
+    a(val, oldVal) {
+      console.log(`new: ${val}, old: ${oldVal}`)
+    },
+    // 字符串方法名称
+    b: 'someMethod',
+    // 该回调将会在被侦听的对象的属性改变时调动，无论其被嵌套多深
+    c: {
+      handler(val, oldVal) {
+        console.log('c changed')
+      },
+      deep: true
+    },
+    // 侦听单个嵌套属性：
+    'c.d': function (val, oldVal) {
+      // do something
+    },
+    // 该回调将会在侦听开始之后立即调用
+    e: {
+      handler(val, oldVal) {
+        console.log('e changed')
+      },
+      immediate: true
+    },
+    // 你可以传入回调数组，它们将会被逐一调用
+    f: [
+      'handle1',
+      function handle2(val, oldVal) {
+        console.log('handle2 triggered')
+      },
+      {
+        handler: function handle3(val, oldVal) {
+          console.log('handle3 triggered')
+        }
+        /* ... */
+      }
+    ]
+  },
+  methods: {
+    someMethod() {
+      console.log('b changed')
+    },
+    handle1() {
+      console.log('handle 1 triggered')
+    }
+  },
+  created() {
+    this.a = 3 // =&gt; new: 3, old: 1
+  }
+}</pre>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>参考链接：<a href="https://cn.vuejs.org/api/options-state.html#watch">watch</a></p>
+<p><a href="https://cn.vuejs.org/guide/essentials/watchers.html#stopping-a-watcher">Vue 侦听器</a></p>
+<p>&nbsp;</p>
+<p><a rel="nofollow" href="/vue-%e7%9a%84-watch-%e4%b8%8d%e8%b5%b7%e4%bd%9c%e7%94%a8%e7%9a%84%e8%a7%a3%e5%86%b3%e6%96%b9%e6%a1%88/">Vue 的 watch 不起作用的解决方案</a>最先出现在<a rel="nofollow" href="/">IT Tech</a>。</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Javascript归档 - IT Tech</title>
+	<atom:link href="/category/javascript/feed/" rel="self" type="application/rss+xml" />
+	<link>/category/javascript/</link>
+	<description></description>
+	<lastBuildDate>Sat, 25 Nov 2023 02:29:09 +0000</lastBuildDate>
+	<language>zh-CN</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.3</generator>
+	<item>
+		<title>WordPress 展示文章“上一页/下一页” 链接</title>
+		<link>/wordpress-%e5%b1%95%e7%a4%ba%e6%96%87%e7%ab%a0%e4%b8%8a%e4%b8%80%e9%a1%b5-%e4%b8%8b%e4%b8%80%e9%a1%b5-%e9%93%be%e6%8e%a5/</link>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Sat, 25 Nov 2023 02:25:02 +0000</pubDate>
+				<category><![CDATA[Javascript]]></category>
+		<guid isPermaLink="false">/?p=450</guid>
+
+					<description><![CDATA[<p>Wordpress可以方便的展示文章的“上一页/下一页”的链接。主要介绍了如何生成链接，并展示。</p>
+<p><a rel="nofollow" href="/wordpress-%e5%b1%95%e7%a4%ba%e6%96%87%e7%ab%a0%e4%b8%8a%e4%b8%80%e9%a1%b5-%e4%b8%8b%e4%b8%80%e9%a1%b5-%e9%93%be%e6%8e%a5/">WordPress 展示文章“上一页/下一页” 链接</a>最先出现在<a rel="nofollow" href="/">IT Tech</a>。</p>
+]]></description>
+										<content:encoded><![CDATA[<p>WordPress可以方便的展示文章的“上一页/下一页”的链接。</p>
+<h2>使用的函数</h2>
+<ul>
+<li>get_previous_post()</li>
+<li>get_next_post()</li>
+</ul>
+<h2>需要修改的文件</h2>
+<p>themes/***/single.php</p>
+<h2>相关代码</h2>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">//显示上一页的标题及链接
+$prev_post = get_previous_post();
+if ( ! empty( $prev_post ) ): ?&gt;
+    &lt;a href="&lt;?php echo get_permalink( $prev_post-&gt;ID ); ?&gt;"&gt;
+        &lt;?php echo apply_filters( 'the_title', $prev_post-&gt;post_title ); ?&gt;
+    &lt;/a&gt;
+&lt;?php endif; ?&gt;
+
+
+
+//显示下一页的标题及链接
+&lt;?php
+$next_post = get_next_post();
+if ( is_a( $next_post , 'WP_Post' ) ) : ?&gt;
+    &lt;a href="&lt;?php echo get_permalink( $next_post-&gt;ID ); ?&gt;"&gt;&lt;?php echo get_the_title( $next_post-&gt;ID ); ?&gt;&lt;/a&gt;</pre>
+<p>&nbsp;</p>
+<p><a rel="nofollow" href="/wordpress-%e5%b1%95%e7%a4%ba%e6%96%87%e7%ab%a0%e4%b8%8a%e4%b8%80%e9%a1%b5-%e4%b8%8b%e4%b8%80%e9%a1%b5-%e9%93%be%e6%8e%a5/">WordPress 展示文章“上一页/下一页” 链接</a>最先出现在<a rel="nofollow" href="/">IT Tech</a>。</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>github文件夹有白色箭头并且不能打开的解决办法</title>
+		<link>/github%e6%96%87%e4%bb%b6%e5%a4%b9%e6%9c%89%e7%99%bd%e8%89%b2%e7%ae%ad%e5%a4%b4%e5%b9%b6%e4%b8%94%e4%b8%8d%e8%83%bd%e6%89%93%e5%bc%80%e7%9a%84%e8%a7%a3%e5%86%b3%e5%8a%9e%e6%b3%95/</link>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Fri, 24 Nov 2023 09:31:02 +0000</pubDate>
+				<category><![CDATA[Javascript]]></category>
+		<guid isPermaLink="false">/?p=444</guid>
+
+					<description><![CDATA[<p>github 项目在浏览器打开，发现文件夹上显示白色箭头，并且该文件夹不能打开。原因可能是由于该文件夹下面的 .git 文件造成的，文章整理了该问题的解决方案。</p>
+<p><a rel="nofollow" href="/github%e6%96%87%e4%bb%b6%e5%a4%b9%e6%9c%89%e7%99%bd%e8%89%b2%e7%ae%ad%e5%a4%b4%e5%b9%b6%e4%b8%94%e4%b8%8d%e8%83%bd%e6%89%93%e5%bc%80%e7%9a%84%e8%a7%a3%e5%86%b3%e5%8a%9e%e6%b3%95/">github文件夹有白色箭头并且不能打开的解决办法</a>最先出现在<a rel="nofollow" href="/">IT Tech</a>。</p>
+]]></description>
+										<content:encoded><![CDATA[<h2>问题描述</h2>
+<p>github 项目在浏览器打开，发现文件夹上显示白色箭头，并且该文件夹不能打开。</p>
+<p><img decoding="async" fetchpriority="high" class="wp-image-445 size-large alignnone" src="/wp-content/uploads/2023/11/截屏2023-11-24-16.40.24-1024x347.png" alt="" width="640" height="217" srcset="/wp-content/uploads/2023/11/截屏2023-11-24-16.40.24-1024x347.png 1024w, /wp-content/uploads/2023/11/截屏2023-11-24-16.40.24-300x102.png 300w, /wp-content/uploads/2023/11/截屏2023-11-24-16.40.24-768x260.png 768w, /wp-content/uploads/2023/11/截屏2023-11-24-16.40.24-1536x520.png 1536w, /wp-content/uploads/2023/11/截屏2023-11-24-16.40.24-850x288.png 850w, /wp-content/uploads/2023/11/截屏2023-11-24-16.40.24.png 2038w" sizes="(max-width: 640px) 100vw, 640px" /></p>
+<h2>原因分析</h2>
+<p>是因为这个文件夹里面有.git隐藏文件，github就将他视为一个子系统模块了。</p>
+<h2>解决方案</h2>
+<p>1、删除 demo文件夹中的.git文件夹：rm -rf demo/.git</p>
+<p>2、执行git rm &#8211;cached demo</p>
+<p>3、执行git add demo</p>
+<p>4、执行git <a class="hl hl-1" href="https://so.csdn.net/so/search?q=commit&amp;spm=1001.2101.3001.7020" target="_blank" rel="noopener" data-report-click="{&quot;spm&quot;:&quot;1001.2101.3001.7020&quot;,&quot;dest&quot;:&quot;https://so.csdn.net/so/search?q=commit&amp;spm=1001.2101.3001.7020&quot;,&quot;extra&quot;:&quot;{\&quot;searchword\&quot;:\&quot;commit\&quot;}&quot;}" data-tit="commit" data-pretit="commit">commit</a> -m &#8220;commit message&#8221;</p>
+<p>5、执行git push origin current_branch_name]</p>
+<p><a rel="nofollow" href="/github%e6%96%87%e4%bb%b6%e5%a4%b9%e6%9c%89%e7%99%bd%e8%89%b2%e7%ae%ad%e5%a4%b4%e5%b9%b6%e4%b8%94%e4%b8%8d%e8%83%bd%e6%89%93%e5%bc%80%e7%9a%84%e8%a7%a3%e5%86%b3%e5%8a%9e%e6%b3%95/">github文件夹有白色箭头并且不能打开的解决办法</a>最先出现在<a rel="nofollow" href="/">IT Tech</a>。</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>rrrrrr</title>
+		<link>/rrrrrr/</link>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Fri, 24 Nov 2023 07:22:09 +0000</pubDate>
+				<category><![CDATA[Javascript]]></category>
+		<guid isPermaLink="false">/?p=423</guid>
+
+					<description><![CDATA[<p><a rel="nofollow" href="/rrrrrr/">rrrrrr</a>最先出现在<a rel="nofollow" href="/">IT Tech</a>。</p>
+]]></description>
+										<content:encoded><![CDATA[<p><a rel="nofollow" href="/rrrrrr/">rrrrrr</a>最先出现在<a rel="nofollow" href="/">IT Tech</a>。</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>实时监控pidstat</title>
+		<link>/%e5%ae%9e%e6%97%b6%e7%9b%91%e6%8e%a7pidstat/</link>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Fri, 24 Nov 2023 03:37:16 +0000</pubDate>
+				<category><![CDATA[Javascript]]></category>
+		<guid isPermaLink="false">/?p=415</guid>
+
+					<description><![CDATA[<p>pidstat主要用于监控全部或指定进程占用系统资源的情况，如CPU，内存、设备IO、任务切换、线程等。pidstat首次运行时显示自系统启动开始的各项统计信息，之后运行pidstat将显示自上次运行该命令以后的统计信息。用户可以通过指定统计的次数和时间来获得所需的统计信息。</p>
+<p><a rel="nofollow" href="/%e5%ae%9e%e6%97%b6%e7%9b%91%e6%8e%a7pidstat/">实时监控pidstat</a>最先出现在<a rel="nofollow" href="/">IT Tech</a>。</p>
+]]></description>
+										<content:encoded><![CDATA[<p>pidstat主要用于监控全部或指定进程占用系统资源的情况，如CPU，内存、设备IO、任务切换、线程等。pidstat首次运行时显示自系统启动开始的各项统计信息，之后运行pidstat将显示自上次运行该命令以后的统计信息。用户可以通过指定统计的次数和时间来获得所需的统计信息。</p>
+<p>命令形式为</p>
+<p>”pidstat [option] [interval] [count]”</p>
+<p>&nbsp;</p>
+<p>统计cpu使用</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic" data-enlighter-linenumbers="false" data-enlighter-theme="classic">pidstat -u</pre>
+<p>统计内容memory的使用</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic" data-enlighter-linenumbers="false">pidstat -r</pre>
+<p>输出信息含义</p>
+<p>minflt/s: 每秒次缺页错误次数(minor page faults)，次缺页错误次数意即虚拟内存地址映射成物理内存地址产生的page fault次数 majflt/s: 每秒主缺页错误次数(major page faults)，当虚拟内存地址映射成物理内存地址时，相应的page在swap中，这样的page fault为major page fault，一般在内存使用紧张时产生 VSZ: 该进程使用的虚拟内存(以kB为单位) RSS: 该进程使用的物理内存(以kB为单位) %MEM: 该进程使用内存的百分比 Command: 拉起进程对应的命令</p>
+<p>&nbsp;</p>
+<p>统计磁盘IO的使用</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic" data-enlighter-linenumbers="false">pidstat -d
+
+pidstat -d 2 5</pre>
+<p>输出含义：</p>
+<div>kB_rd/s: 每秒进程从磁盘读取的数据量(以kB为单位)</div>
+<div>kB_wr/s: 每秒进程向磁盘写的数据量(以kB为单位)</div>
+<div>Command: 拉起进程对应的命令</div>
+<p>统计特定pid的cpu/内存/磁盘IO的使用</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic" data-enlighter-linenumbers="false" data-enlighter-title="使用pidstat 查看特定进程pid的使用">pidstat -u -p 1
+pidstat -r -p 1
+pidstat -d -p 1
+
+pidstat -u -p 1 2 5
+pidstat -r -p 1 2 5
+pidstat -d -p 1 2 5</pre>
+<p>&nbsp;</p>
+<p><a rel="nofollow" href="/%e5%ae%9e%e6%97%b6%e7%9b%91%e6%8e%a7pidstat/">实时监控pidstat</a>最先出现在<a rel="nofollow" href="/">IT Tech</a>。</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Linux 网络分析命令</title>
+		<link>/linux-%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e5%91%bd%e4%bb%a4/</link>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Fri, 24 Nov 2023 03:05:15 +0000</pubDate>
+				<category><![CDATA[Javascript]]></category>
+		<guid isPermaLink="false">/?p=414</guid>
+
+					<description><![CDATA[<p>linux 提供了丰富的性能检测工具， 文章介绍了比较常用的网络性能检测命令：netstat， ping， telnet， tcpdump等。</p>
+<p><a rel="nofollow" href="/linux-%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e5%91%bd%e4%bb%a4/">Linux 网络分析命令</a>最先出现在<a rel="nofollow" href="/">IT Tech</a>。</p>
+]]></description>
+										<content:encoded><![CDATA[<p>常用的网络分析命令</p>
+<ul>
+<li>netstat</li>
+<li>nar</li>
+<li>ifconfig</li>
+<li>ip</li>
+<li>traceroute</li>
+<li>tcpdump</li>
+<li>ping</li>
+<li>ip</li>
+</ul>
+<p>netstat</p>
+<p>可以提供各种类型的网络统计数据，</p>
+<p><code>netstat -i </code></p>
+<p>ifconfig</p>
+<p>查看网络接口数据</p>
+<p><code>ifconfig </code></p>
+<p>ping</p>
+<p>测试网络的连通性</p>
+<p>telnet</p>
+<p>测试特定 ip ，特定端口的连通性</p>
+<p><code>telnet 192.168.1.1 11211</code></p>
+<p>&nbsp;</p>
+<p><a rel="nofollow" href="/linux-%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e5%91%bd%e4%bb%a4/">Linux 网络分析命令</a>最先出现在<a rel="nofollow" href="/">IT Tech</a>。</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>如何检测JS的对象中是否含有某个属性</title>
+		<link>/%e5%a6%82%e4%bd%95%e6%a3%80%e6%b5%8bjs%e7%9a%84%e5%af%b9%e8%b1%a1%e4%b8%ad%e6%98%af%e5%90%a6%e5%90%ab%e6%9c%89%e6%9f%90%e4%b8%aa%e5%b1%9e%e6%80%a7/</link>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Fri, 03 Nov 2023 07:46:00 +0000</pubDate>
+				<category><![CDATA[Javascript]]></category>
+		<guid isPermaLink="false">/?p=404</guid>
+
+					<description><![CDATA[<p>javascript中对对象属性的检测，可以有多种方式，看一下都有哪些。</p>
+<p><a rel="nofollow" href="/%e5%a6%82%e4%bd%95%e6%a3%80%e6%b5%8bjs%e7%9a%84%e5%af%b9%e8%b1%a1%e4%b8%ad%e6%98%af%e5%90%a6%e5%90%ab%e6%9c%89%e6%9f%90%e4%b8%aa%e5%b1%9e%e6%80%a7/">如何检测JS的对象中是否含有某个属性</a>最先出现在<a rel="nofollow" href="/">IT Tech</a>。</p>
+]]></description>
+										<content:encoded><![CDATA[<h2>使用in</h2>
+<p><code class="block">var o={x:1};<br />
+"x" in o;            //true，自有属性存在<br />
+"y" in o;            //false<br />
+"toString" in o;     //true，是一个继承属性</code></p>
+<h2>使用对象的hasOwnProperty()方法</h2>
+<p><code class="block">var o={x:1};<br />
+o.hasOwnProperty("x");    　　 //true，自有属性中有x<br />
+o.hasOwnProperty("y");    　　 //false，自有属性中不存在y<br />
+o.hasOwnProperty("toString");  //false，这是一个继承属性，但不是自有属性</code></p>
+<h2>用undefined判断</h2>
+<p><code class="block">var o={x:1};<br />
+o.x!==undefined;        //true<br />
+o.y!==undefined;        //false<br />
+o.toString!==undefined  //true</code></p>
+<h2>在条件语句中直接判断</h2>
+<p><code class="block">var o={};<br />
+if(o.x) o.x+=1;  //如果x是undefine,null,false," ",0或NaN,它将保持不变</code></p>
+<p><a rel="nofollow" href="/%e5%a6%82%e4%bd%95%e6%a3%80%e6%b5%8bjs%e7%9a%84%e5%af%b9%e8%b1%a1%e4%b8%ad%e6%98%af%e5%90%a6%e5%90%ab%e6%9c%89%e6%9f%90%e4%b8%aa%e5%b1%9e%e6%80%a7/">如何检测JS的对象中是否含有某个属性</a>最先出现在<a rel="nofollow" href="/">IT Tech</a>。</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title></title>
+		<link>/380-2/</link>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Sun, 29 Oct 2023 03:28:04 +0000</pubDate>
+				<category><![CDATA[Javascript]]></category>
+		<guid isPermaLink="false">/?p=380</guid>
+
+					<description><![CDATA[<p>更新本地的Repository 索引 Apt/Yum等包管理器通过使用远端Repository 的包进行本地更新。用户本地保存远端Repository的索引，但是远端Repository是会发生变化的。每次安装软件前，最好根据远端Repository的信息更新本地的Repository索引。 apt update apache2 apt remove apache2 apt autoremove apt upgrade apt-cache search apache apt-cache search apache &#124; more &#160; Fedora/Centos  使用 Yum/DNF 都可以 dnf search apache dnf install httpd dnf remove httpd dnf autoremove dnf upgrade &#160; Arch Linux 使用 Packman pacman -Sy pacman -Ss apache pacman -S apache pacman -R...</p>
+<p><a rel="nofollow" href="/380-2/"></a>最先出现在<a rel="nofollow" href="/">IT Tech</a>。</p>
+]]></description>
+										<content:encoded><![CDATA[<p>更新本地的Repository 索引</p>
+<p>Apt/Yum等包管理器通过使用远端Repository 的包进行本地更新。用户本地保存远端Repository的索引，但是远端Repository是会发生变化的。每次安装软件前，最好根据远端Repository的信息更新本地的Repository索引。</p>
+<p>apt update apache2</p>
+<p>apt remove apache2</p>
+<p>apt autoremove</p>
+<p>apt upgrade</p>
+<p>apt-cache search apache</p>
+<p>apt-cache search apache | more</p>
+<p>&nbsp;</p>
+<p>Fedora/Centos  使用 Yum/DNF 都可以</p>
+<p>dnf search apache</p>
+<p>dnf install httpd</p>
+<p>dnf remove httpd</p>
+<p>dnf autoremove</p>
+<p>dnf upgrade</p>
+<p>&nbsp;</p>
+<p>Arch Linux 使用 Packman</p>
+<p>pacman -Sy</p>
+<p>pacman -Ss apache</p>
+<p>pacman -S apache</p>
+<p>pacman -R apache</p>
+<p>pacman -Qdt  //查找不用的包</p>
+<p>&nbsp;</p>
+<p><a rel="nofollow" href="/380-2/"></a>最先出现在<a rel="nofollow" href="/">IT Tech</a>。</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>如何使用DNF 包管理器</title>
+		<link>/%e5%a6%82%e4%bd%95%e4%bd%bf%e7%94%a8dnf-%e5%8c%85%e7%ae%a1%e7%90%86%e5%99%a8/</link>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Sun, 29 Oct 2023 02:38:24 +0000</pubDate>
+				<category><![CDATA[Javascript]]></category>
+		<guid isPermaLink="false">/?p=376</guid>
+
+					<description><![CDATA[<p>简介：DNF 是一个Linux 包管理器，可以使用DNF 包管理器的 Linux 系统版本包括：Fedora，Centos、Redhat，Alma Rocky。DNF 命令同其他包管理器：Yum， Apt，pacman，Zipper 等一样应用广泛。本文介绍了使用DNF 完成软件的安装、查找、删除、更新等操作。 &#160; &#160; DNF 作用 查找包 dnf search dnf search apache dnf search redis dnf search varnish 列出当前通过DNF安装的包 dnf list installed 提示：该命令会列出所有的安装包，包括了用户自己安装的，以及来自于系统安装的，例如Fedora 系统。 列出当前通过DNF Repository最近更新的包 dnf list recent DNF 命令通过从远端的DNF Repository 获取软件，然后在本地进行安装。 通常远端DNF Repository 的软件会进行更新，以加强软件的安全性和功能。通过dnf list recent 可以让我们找到，本地安装且在远端更新的软件列表 安装包 dnf install httpd 同时安装多个包 dnf install...</p>
+<p><a rel="nofollow" href="/%e5%a6%82%e4%bd%95%e4%bd%bf%e7%94%a8dnf-%e5%8c%85%e7%ae%a1%e7%90%86%e5%99%a8/">如何使用DNF 包管理器</a>最先出现在<a rel="nofollow" href="/">IT Tech</a>。</p>
+]]></description>
+										<content:encoded><![CDATA[<p>简介：DNF 是一个Linux 包管理器，可以使用DNF 包管理器的 Linux 系统版本包括：Fedora，Centos、Redhat，Alma Rocky。DNF 命令同其他包管理器：Yum， Apt，pacman，Zipper 等一样应用广泛。本文介绍了使用DNF 完成软件的安装、查找、删除、更新等操作。</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>DNF 作用</p>
+<p>查找包</p>
+<p>dnf search</p>
+<p>dnf search apache</p>
+<p>dnf search redis</p>
+<p>dnf search varnish</p>
+<p>列出当前通过DNF安装的包</p>
+<p>dnf list installed</p>
+<p>提示：该命令会列出所有的安装包，包括了用户自己安装的，以及来自于系统安装的，例如Fedora 系统。</p>
+<p>列出当前通过DNF Repository最近更新的包</p>
+<p>dnf list recent</p>
+<p>DNF 命令通过从远端的DNF Repository 获取软件，然后在本地进行安装。 通常远端DNF Repository 的软件会进行更新，以加强软件的安全性和功能。通过dnf list recent 可以让我们找到，本地安装且在远端更新的软件列表</p>
+<p>安装包</p>
+<p>dnf install httpd</p>
+<p>同时安装多个包</p>
+<p>dnf install redis varnish</p>
+<p>删除包</p>
+<p>dnf remove httpd</p>
+<p>dnf remove redis varnish</p>
+<p>更新软件</p>
+<p>dnf upgrade redis</p>
+<p>更新系统全部软件</p>
+<p>dnf upgrade</p>
+<p>删除不在使用的依赖dependency</p>
+<p>dnf autoremove</p>
+<p>如何通过DNF 进行自动更新系统软件</p>
+<p>dnf install dnf-automatic</p>
+<p>vim /etc/dnf/automatic.conf</p>
+<p>&nbsp;</p>
+<p>参考： https://www.youtube.com/watch?v=9-C15b8t8Os</p>
+<p><a rel="nofollow" href="/%e5%a6%82%e4%bd%95%e4%bd%bf%e7%94%a8dnf-%e5%8c%85%e7%ae%a1%e7%90%86%e5%99%a8/">如何使用DNF 包管理器</a>最先出现在<a rel="nofollow" href="/">IT Tech</a>。</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>在 Mac 上升级 PHP 到 PHP8.1</title>
+		<link>/%e5%9c%a8-mac-%e4%b8%8a%e5%8d%87%e7%ba%a7-php-%e5%88%b0-php8-1/</link>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Fri, 27 Oct 2023 07:27:27 +0000</pubDate>
+				<category><![CDATA[Javascript]]></category>
+		<guid isPermaLink="false">/?p=374</guid>
+
+					<description><![CDATA[<p>使用 homebrew 进行升级 更新brew至最新 brew update 升级php，有两种方式 方式一：php常规更新 brew upgrade php 方式二：使用 shivammathur/homebrew-php 升级 brew tap shivammathur/php brew install shivammathur/php/php@8.1 在不同的php 版本转换 brew link --overwrite --force php@8.1 参考链接：https://github.com/shivammathur/homebrew-php &#160; PHP Extension 扩展的安装 PHP Extension 扩展，可以使用pecl , 以redis/xdebug 为例子 pecl install redispecl install xdebug 查看当前安装的PHP Extension pecl list 搜索PHP Extension pecl search pdf 每次安装完新的PHP Extension，需要重启 Web Server...</p>
+<p><a rel="nofollow" href="/%e5%9c%a8-mac-%e4%b8%8a%e5%8d%87%e7%ba%a7-php-%e5%88%b0-php8-1/">在 Mac 上升级 PHP 到 PHP8.1</a>最先出现在<a rel="nofollow" href="/">IT Tech</a>。</p>
+]]></description>
+										<content:encoded><![CDATA[<p>使用 homebrew 进行升级</p>
+<p>更新brew至最新</p>
+<p><code class="block">brew update</code></p>
+<p>升级php，有两种方式</p>
+<p>方式一：php常规更新</p>
+<p><code class="block">brew upgrade php</code></p>
+<p>方式二：使用 <code>shivammathur/homebrew-php</code> 升级</p>
+<p><code class="block">brew tap shivammathur/php<br />
+brew install shivammathur/php/php@8.1<br />
+</code></p>
+<p>在不同的php 版本转换</p>
+<p><code class="block">brew link --overwrite --force php@8.1</code></p>
+<p>参考链接：https://github.com/shivammathur/homebrew-php</p>
+<p>&nbsp;</p>
+<p><code>PHP Extension</code> 扩展的安装</p>
+<p>PHP Extension 扩展，可以使用pecl , 以redis/xdebug 为例子<br />
+<code class="block">pecl install redis</code><code class="block">pecl install xdebug</code></p>
+<p>查看当前安装的PHP Extension</p>
+<p><code class="block">pecl list</code></p>
+<p>搜索PHP Extension</p>
+<p><code class="block">pecl search pdf</code></p>
+<p>每次安装完新的PHP Extension，需要重启 Web Server</p>
+<p><code class="block">sudo nginx -s reload</code></p>
+<p><code class="block">sudo apachectl restart</code></p>
+<p><code class="block">sudo httpd restart</code></p>
+<p>查看php 中安装/加载的php 模块</p>
+<p><code class="block">php -m</code></p>
+<p>删除安装的PHP Extension</p>
+<p><code class="block">pecl uninstall xdebug</code></p>
+<p>升级完成PHP 8.1 后，可以使用PHP8.1 的新特性：</p>
+<p><a href="https://www.php.net/releases/8.1/zh.php">PHP8.1 新特性</a></p>
+<p>&nbsp;</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="css" data-enlighter-theme="beyond">code {
+font-family: Source Code Pro,DejaVu Sans Mono,Ubuntu Mono,Anonymous Pro,Droid Sans Mono,Menlo,Monaco,Consolas,Inconsolata,Courier,monospace,PingFang SC,Microsoft YaHei,sans-serif;
+font-size: 14px;
+line-height: 22px;
+color: #c7254e;
+padding: 2px 4px;
+border-radius: 2px;
+background-color: #f9f2f4;
+}
+
+code.block {
+display: block;
+padding: 5px 4px;
+margin: 10px 0;
+}</pre>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>参考链接：https://stitcher.io/blog/php-81-upgrade-mac</p>
+<p><a rel="nofollow" href="/%e5%9c%a8-mac-%e4%b8%8a%e5%8d%87%e7%ba%a7-php-%e5%88%b0-php8-1/">在 Mac 上升级 PHP 到 PHP8.1</a>最先出现在<a rel="nofollow" href="/">IT Tech</a>。</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>composer install 提示输入 密码的问题</title>
+		<link>/371-2/</link>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Fri, 27 Oct 2023 06:57:54 +0000</pubDate>
+				<category><![CDATA[Javascript]]></category>
+		<guid isPermaLink="false">/?p=371</guid>
+
+					<description><![CDATA[<p>当前环境： 1. 主机环境host ： Mac OS 2. 安装了docker 3. Docker 通过启动了镜像环境 LAMP， 4. docker container 容器安装composer 问题描述： 在主机环境运行 composer install （成功） 在docker container 容器运行 composer install：提示输入git repository 的密码 问题思考： 通过Git 安装私有的 git repository，需要设置Git 用户名/Email地址 主机环境可以下载Git Repository， 说明信息设置是正确的 可以在docker container 中设置与主机环境相同的设置 使用的命令： 主机环境查看git 设置 git config -l docker container 设置Git 用户名/Email地址 git config --global user.name "userName"...</p>
+<p><a rel="nofollow" href="/371-2/">composer install 提示输入 密码的问题</a>最先出现在<a rel="nofollow" href="/">IT Tech</a>。</p>
+]]></description>
+										<content:encoded><![CDATA[<p>当前环境：</p>
+<p>1. 主机环境host ： Mac OS</p>
+<p>2. 安装了docker</p>
+<p>3. Docker 通过启动了镜像环境 LAMP，</p>
+<p>4. docker container 容器安装composer</p>
+<p>问题描述：</p>
+<ol>
+<li>在主机环境运行 composer install （成功）</li>
+<li>在docker container 容器运行 composer install：提示输入git repository 的密码</li>
+</ol>
+<p>问题思考：</p>
+<ul>
+<li>通过Git 安装私有的 git repository，需要设置Git 用户名/Email地址</li>
+<li>主机环境可以下载Git Repository， 说明信息设置是正确的</li>
+<li>可以在docker container 中设置与主机环境相同的设置</li>
+</ul>
+<p>使用的命令：</p>
+<ol>
+<li>主机环境查看git 设置</li>
+<li>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">git config -l</pre>
+</li>
+<li>docker container 设置Git 用户名/Email地址</li>
+<li>
+<pre class="EnlighterJSRAW" data-enlighter-language="generic">git config --global user.name "userName"
+git config --global user.email "name@example.com”</pre>
+</li>
+<li>拷贝host主机的 .ssh 到 docker container 的 .ssh</li>
+<li></li>
+</ol>
+<p>&nbsp;</p>
+<p><a rel="nofollow" href="/371-2/">composer install 提示输入 密码的问题</a>最先出现在<a rel="nofollow" href="/">IT Tech</a>。</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

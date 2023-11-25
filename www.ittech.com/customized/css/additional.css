@@ -1,0 +1,32 @@
+.blogposts-list .blogpost-button {
+    display: none !important;
+}
+
+code {
+    font-family: Source Code Pro,DejaVu Sans Mono,Ubuntu Mono,Anonymous Pro,Droid Sans Mono,Menlo,Monaco,Consolas,Inconsolata,Courier,monospace,PingFang SC,Microsoft YaHei,sans-serif;
+    font-size: 14px;
+    line-height: 22px;
+    color: #c7254e;
+    padding: 2px 4px;
+    border-radius: 2px;
+    background-color: #f9f2f4;
+}
+
+code.block {
+    display: block;
+    padding: 5px 4px;
+    margin: 10px 0;
+}
+
+code span {
+    color: rgba(0, 128, 0, 0.9);
+}
+
+.fbox h1, .fbox h2, .fbox h3 {
+    color: #ff0000;
+    margin-top: 50px;
+}
+
+.enlighter-default .enlighter-toolbar {
+    display: none !important;
+}

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Javascript归档 - IT Tech</title>
+	<atom:link href="/tag/javascript/feed/" rel="self" type="application/rss+xml" />
+	<link>/tag/javascript/</link>
+	<description></description>
+	<lastBuildDate>Sun, 10 Sep 2023 03:21:33 +0000</lastBuildDate>
+	<language>zh-CN</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.3</generator>
+	<item>
+		<title>JS常见问题</title>
+		<link>/js%e5%b8%b8%e8%a7%81%e9%97%ae%e9%a2%98/</link>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Fri, 25 Aug 2023 07:45:29 +0000</pubDate>
+				<category><![CDATA[Javascript]]></category>
+		<guid isPermaLink="false">/?p=148</guid>
+
+					<description><![CDATA[<p>What are Cookies? Cookies are data, stored in small text files, on your computer. When a web server has sent a web page to a browser, the connection is shut down, and the server forgets everything about the user. Cookies were invented to solve the problem &#8220;how to remember information about the user&#8221;: When a...</p>
+<p><a rel="nofollow" href="/js%e5%b8%b8%e8%a7%81%e9%97%ae%e9%a2%98/">JS常见问题</a>最先出现在<a rel="nofollow" href="/">IT Tech</a>。</p>
+]]></description>
+										<content:encoded><![CDATA[<p>What are Cookies?<br />
+Cookies are data, stored in small text files, on your computer.</p>
+<p>When a web server has sent a web page to a browser, the connection is shut down, and the server forgets everything about the user.</p>
+<p>Cookies were invented to solve the problem &#8220;how to remember information about the user&#8221;:</p>
+<p>When a user visits a web page, his/her name can be stored in a cookie.<br />
+Next time the user visits the page, the cookie &#8220;remembers&#8221; his/her name.<br />
+Cookies are saved in name-value pairs like:</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="php" data-enlighter-highlight="3, 7, 10" data-enlighter-theme="atomic">if ( isset( $_GET['key'] ) &amp;&amp; isset( $_POST['key'] ) &amp;&amp; $_GET['key'] !== $_POST['key'] ) {
+    wp_die( __( 'A key value mismatch has been detected. Please follow the link provided in your activation email.' ), __( 'An error occurred during the activation' ), 400 );
+} elseif ( ! empty( $_GET['key'] ) ) {
+    $key = $_GET['key'];
+} elseif ( ! empty( $_POST['key'] ) ) {
+    $key = $_POST['key'];
+}</pre>
+<p>&nbsp;</p>
+<p>When a browser requests a web page from a server, cookies belonging to the page are added to the request. This way the server gets the necessary data to &#8220;remember&#8221; information about users.</p>
+<div class="w3-panel w3-note">
+<h2>Create a Cookie with JavaScript</h2>
+<p>JavaScript can create, read, and delete cookies with the <code class="w3-codespan">document.cookie</code> property.</p>
+<p>With JavaScript, a cookie can be created like this:</p>
+<div class="w3-example">
+<div class="w3-code notranslate jsHigh"><span class="jscolor">document.<span class="jspropertycolor">cookie</span> = <span class="jsstringcolor">&#8220;username=John Doe&#8221;</span>;</span></div>
+</div>
+<p>You can also add an expiry date (in UTC time). By default, the cookie is deleted when the browser is closed:</p>
+<div class="w3-example">
+<div class="w3-code notranslate jsHigh"><span class="jscolor">document.<span class="jspropertycolor">cookie</span> = <span class="jsstringcolor">&#8220;username=John Doe; expires=Thu, 18 Dec 2013 12:00:00 UTC&#8221;</span>;</span></div>
+</div>
+<p>With a path parameter, you can tell the browser what path the cookie belongs to. By default, the cookie belongs to the current page.</p>
+<div class="w3-example">
+<div class="w3-code notranslate jsHigh"><span class="jscolor">document.<span class="jspropertycolor">cookie</span> = <span class="jsstringcolor">&#8220;username=John Doe; expires=Thu, 18 Dec 2013 12:00:00 UTC; path=/&#8221;</span>;</span></div>
+</div>
+</div>
+<p><a rel="nofollow" href="/js%e5%b8%b8%e8%a7%81%e9%97%ae%e9%a2%98/">JS常见问题</a>最先出现在<a rel="nofollow" href="/">IT Tech</a>。</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>
